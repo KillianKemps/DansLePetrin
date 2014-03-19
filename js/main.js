@@ -12,9 +12,6 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     maxZoom: 18
 }).addTo(map);
 
-
-
-
 //add marker
 var marker = L.marker([48.853, 2.3835], {title:'Musée Jesaispasquoi'}).addTo(map);
 //add popup on marker
