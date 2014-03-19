@@ -1,0 +1,31 @@
+﻿/**
+* @site 		Marque/Projet
+* @version 		1.0
+* @lastmodified 2012-11-21
+*/
+
+/** --- = @section TYPOGRAPHY ---*/
+/** --- = @section LAYOUT---*/
+
+#map{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#interfaceBlock{
+	position: absolute;
+	top:10%;
+	height:70%;
+	width: 20%;
+	border: solid black 1px;
+	background-color: black; 
+	display: none;
+}
+
+/** --- = @section COMPONENT ---*/
+/** --- = @section IE ---*/
+
