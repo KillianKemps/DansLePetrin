@@ -38,7 +38,7 @@ marker2.on('click', onMarker2Click);
 
 
 //on map, popup appears with coordinates
-var popup = L.popup();
+/*var popup = L.popup();
 
 function onMapClick(e) {
     popup
@@ -47,24 +47,46 @@ function onMapClick(e) {
         .openOn(map);
 }
 
-map.on('click', onMapClick);
+map.on('click', onMapClick);*/
 
 /******************************************************/
 /* Importing data and putting name on marker          */
 
 
-function onEachFeature(features, layer) {
+function onEachFeatureMusees(features, layer) {
     //link name to the popup of the marker
         layer.bindPopup(features.properties.nom_du_musee);
 }
 
+function onEachFeatureHotels(features, layer) {
+    //link name to the popup of the marker
+        layer.bindPopup(features.properties.nom_commercial);
+}
+
+function onEachFeatureHopitaux(features, layer) {
+    //link name to the popup of the marker
+        layer.bindPopup(features.properties.raison_sociale);
+}
+function onEachFeatureCommissariats(features, layer) {
+    //link name to the popup of the marker
+        layer.bindPopup("Commissariat");
+}
+
 //import museum data and put the name in the popup
-var myLayer = L.geoJson(data_museum, {
-    onEachFeature: onEachFeature
+var myLayer = L.geoJson(musees, {
+    onEachFeature: onEachFeatureMusees
 }).addTo(map);
 
-var myOtherLayer = L.geoJson(onefeature, {
-    onEachFeature: onEachFeature
+var myOtherLayer = L.geoJson(hotels, {
+    onEachFeature: onEachFeatureHotels
+}).addTo(map);
+
+var myOtherLayer = L.geoJson(hopitaux, {
+    onEachFeature: onEachFeatureHopitaux
+}).addTo(map);
+
+var myOtherLayer = L.geoJson(commissariats, {
+    onEachFeature: onEachFeatureCommissariats
 }).addTo(map);
 
 
