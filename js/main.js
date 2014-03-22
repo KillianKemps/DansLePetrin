@@ -36,8 +36,12 @@ marker.on('click', onMarkerClick);
 function onMarker2Click(e) {
     var interfaceBlock = document.getElementById('interfaceBlock');
     interfaceBlock.style.display = "block";
+    //Display event in interface
+    var event = ['<p>Bruno vous demande un café.<p/>', '<p>Il n\'y a personne, une lettre se trouve par terre.<p/>', '<p>Antoine Beauvilain vous saute dessus en criant "SQUIRREL !"<p/>'];
+    var event = event[Math.floor(Math.random()*event.length)]
+     var paragraphe = document.getElementById('paragraphe');
+    paragraphe.innerHTML = event;
 }
-
 //close the interface
 function onClickclose() {
     var interfaceBlock = document.getElementById('interfaceBlock');
