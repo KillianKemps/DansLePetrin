@@ -17,6 +17,7 @@
 }
 
 #interfaceBlock{
+	color: white;
 	position: absolute;
 	top:10%;
 	height:70%;
@@ -32,6 +33,15 @@
 	margin-right: 5%;
 	margin-left: 5%;
 	margin-bottom: 10px;
+}
+#closebutton {
+	float: right;
+	font-size: 10;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5px;
+	width: 18px;
+	height: 18px;
 }
 
 /** --- = @section COMPONENT ---*/

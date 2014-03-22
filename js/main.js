@@ -38,6 +38,11 @@ function onMarker2Click(e) {
     interfaceBlock.style.display = "block";
 }
 
+//close the interface
+function onClickclose() {
+    var interfaceBlock = document.getElementById('interfaceBlock');
+    interfaceBlock.style.display = "none";
+}
 //put trigger on marker
 marker2.on('click', onMarker2Click);
 
