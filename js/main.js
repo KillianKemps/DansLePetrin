@@ -22,6 +22,14 @@ var marker2 = L.marker([48.852, 2.389], {title:'Show interface'}).addTo(map);
 //add popup on marker
 marker2.bindPopup("I'm showing the interface ! ");
 
+var fastfoodIcon = L.icon({
+            iconUrl: 'img/fastfood.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+        });
+
+
 /*****************************************************************/
 /* Creating event when clicking on marker                        */
 
@@ -42,6 +50,11 @@ function onMarker2Click(e) {
 function onClickclose() {
     var interfaceBlock = document.getElementById('interfaceBlock');
     interfaceBlock.style.display = "none";
+}
+
+function changeIcon(e) {
+    console.log(e.getLatLng);
+    marker.setIcon(fastfoodIcon);
 }
 //put trigger on marker
 marker2.on('click', onMarker2Click);
@@ -111,3 +124,5 @@ var overlayMaps = {
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+hotelsLayer.on('click', changeIcon);
