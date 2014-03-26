@@ -1,4 +1,7 @@
 
+/*****************************************************************/
+/* Creating custom markers and forms                             */
+
 //add marker
 var marker = L.marker([48.853, 2.3835], {title:'Musée Jesaispasquoi'}).addTo(map);
 //add popup on marker
