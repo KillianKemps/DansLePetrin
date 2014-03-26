@@ -29,6 +29,15 @@ var fastfoodIcon = L.icon({
             popupAnchor: [0, -28]
         });
 
+var herosIcon = L.icon({
+            iconUrl: 'img/digsby.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 25],
+            popupAnchor: [0, -28]
+        });
+
+var heros = L.marker([48.83478, 2.3679], {title:'Heros', icon:herosIcon, draggable: true}).addTo(map);
+
 
 /*****************************************************************/
 /* Creating event when clicking on marker                        */
@@ -74,8 +83,8 @@ function onMapClick(e) {
         .openOn(map);
 }
 
-map.on('click', onMapClick);*/
-
+map.on('click', onMapClick);
+*/
 /******************************************************/
 /* Importing data and putting name on marker          */
 
@@ -106,7 +115,7 @@ var museesLayer = L.geoJson(musees, {
 
 var hotelsLayer = L.geoJson(hotels, {
     onEachFeature: onEachFeatureHotels
-}).addTo(map);
+});
 
 var hopitauxLayer = L.geoJson(hopitaux, {
     onEachFeature: onEachFeatureHopitaux
@@ -130,3 +139,16 @@ var overlayMaps = {
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 hotelsLayer.on('click', changeIcon);
+
+/* Generating circle around the heros */
+
+var circle = L.circle(heros.getLatLng(), 700, {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5
+}).addTo(map);
+
+heros.on('drag', function(event){
+            var coordinates = heros.getLatLng();
+            circle.setLatLng(coordinates);
+});
