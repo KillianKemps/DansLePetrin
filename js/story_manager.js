@@ -16,8 +16,8 @@ function story_manager(){
 
     description.innerHTML = story[window.ref].description;
     title.innerHTML = story[window.ref].title;
-   /* var erase = document.getElementsByTagName('li');
-    erase.parentNode.removeChild(erase);*/
+    
+    document.getElementById('conseq_ref').innerHTML = ""; // Erase the content before adding
     for ( var conseq in story[window.ref].conseq_ref){
     	/* Create a li element to host a choice */
     	var li = document.createElement('li');
