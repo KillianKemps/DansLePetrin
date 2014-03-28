@@ -34,4 +34,4 @@ function story_manager(){
 
 }
 
-museesLayer.on('click', function(){window.ref="A2";});
+museesLayer.on('click', function(){window.ref="A2";story_manager();});
