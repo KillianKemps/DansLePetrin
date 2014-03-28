@@ -42,6 +42,10 @@
 	width: 18px;
 	height: 18px;
 }
+#showInterface{
+	position: absolute;
+	left: 50px;
+}
 
 /** --- = @section COMPONENT ---*/
 /** --- = @section IE ---*/
