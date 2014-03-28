@@ -23,6 +23,7 @@ function story_manager(){
     	var li = document.createElement('li');
     	document.getElementById('conseq_ref').appendChild(li);
     	var button = document.createElement('button');
+    	button.setAttribute('onclick', "function update(){window.ref = story[window.ref].conseq_ref[conseq][0];console.log('ref: ' + window.ref);story_manager();} update()"); 
     	button.setAttribute('data-conseq_ref',story[window.ref].conseq_ref[conseq][0]); 
     	button.setAttribute('data-location',story[window.ref].conseq_ref[conseq][2]); 
     	li.appendChild(button);
@@ -34,4 +35,7 @@ function story_manager(){
 
 }
 
-museesLayer.on('click', function(){window.ref="A2";story_manager();});
+museesLayer.on('click', function(){
+	window.ref="A2";
+	story_manager();
+});

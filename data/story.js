@@ -11,12 +11,12 @@ var story = {
     title: "AAAA",
     description: "BBB",
     conseq_ref: [
-      ["A2","Aller au kiosque", "kiosque"],
+      ["A4","Aller au musée", "musee"],
       ["A3","Aller chez le fleuriste", "fleuriste"]
     ]
   },
   A3: {
-    title: "esrgfbdgsdf",
+    title: "bbbbesrfhsdf",
     description: "gdfsjdfhsdfsdsfhfghdfgh",
     conseq_ref: [
       ["A2","Aller au kiosque", "kiosque"],
