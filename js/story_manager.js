@@ -1,13 +1,13 @@
 /*****************************************************************/
 /* Importing story data and managin it                           */
 
-console.log(story.A1.title);
-console.log(story.A1.description);
-for ( var conseq in story.A1.conseq_ref)
+console.log(story.A001.title);
+console.log(story.A001.description);
+for ( var conseq in story.A001.conseq_ref)
 console.log(conseq.ref);
 
 
-window.ref = "A1"; //Init first step
+window.ref = "A001"; //Init first step
 
 function story_manager(){
     var interfaceBlock = document.getElementById('interfaceBlock');
@@ -23,7 +23,7 @@ function story_manager(){
     	var li = document.createElement('li');
     	document.getElementById('conseq_ref').appendChild(li);
     	var button = document.createElement('button');
-    	button.setAttribute('onclick', "function update(){window.ref = story[window.ref].conseq_ref[conseq][0];console.log('ref: ' + window.ref);story_manager();} update()"); 
+    	button.setAttribute('onclick', "function update(){ window.ref = \"" + story[window.ref].conseq_ref[conseq][0] + "\"; story_manager();} update()"); 
     	button.setAttribute('data-conseq_ref',story[window.ref].conseq_ref[conseq][0]); 
     	button.setAttribute('data-location',story[window.ref].conseq_ref[conseq][2]); 
     	li.appendChild(button);
@@ -32,10 +32,9 @@ function story_manager(){
     	var choice = document.createTextNode(story[window.ref].conseq_ref[conseq][1]);
     	button.appendChild(choice);
     }
-
 }
 
 museesLayer.on('click', function(){
-	window.ref="A2";
+	window.ref="A002";
 	story_manager();
 });
