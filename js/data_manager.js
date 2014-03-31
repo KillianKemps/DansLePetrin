@@ -3,10 +3,7 @@
 /* Importing data and putting name on marker          */
 
 
-function onEachFeatureMusees(features, layer) {
-    //link name to the popup of the marker
-        layer.bindPopup(features.properties.nom_du_musee);
-}
+
 
 function onEachFeatureHotels(features, layer) {
     //link name to the popup of the marker
@@ -23,9 +20,41 @@ function onEachFeatureCommissariats(features, layer) {
 }
 
 //import museum data and put the name in the popup
-var museesLayer = L.geoJson(musees, {
-    onEachFeature: onEachFeatureMusees
-}).addTo(map);
+
+
+
+$.getJSON("./data/musees.geojson")
+
+    .done(function(musees) {
+        Game.museesLayer = L.geoJson(musees, {
+            onEachFeature: onEachFeatureMusees
+        }).addTo(map);
+
+        console.log('musees: ' + musees);
+        console.log('museesLayer (data): ' + Game.museesLayer);
+
+        function museesOnClick(){
+            Game.museesLayer.on('click', function(){
+                window.ref="A002";
+                story_manager();
+            });
+
+        }
+
+        function onEachFeatureMusees(features, layer) {
+        //link name to the popup of the marker
+            layer.bindPopup(features.properties.nom_du_musee);
+
+            layer.on({
+                click: museesOnClick
+            });
+        }
+        console.log('museesLayer (data): ' + Game.museesLayer);
+
+
+    });
+
+
 
 var hotelsLayer = L.geoJson(hotels, {
     onEachFeature: onEachFeatureHotels
@@ -47,7 +76,7 @@ var overlayMaps = {
     "Commissariats": commissariatsLayer,
     "Hopitaux": hopitauxLayer, 
     "Hotels": hotelsLayer,
-    "Musees": museesLayer 
+    "Musees": Game.museesLayer 
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
