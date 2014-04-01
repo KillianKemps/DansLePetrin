@@ -59,11 +59,13 @@ function showHideInterface(){
             marginLeft: '-630px'
         }, 500);
         Game.showHideInterface = 1;
+        document.getElementById('slideButton').innerHTML = ">";
         //console.log('boolean: ' + Game.showHideInterface);
     }
     else{
         $('#interfaceBlock').css('margin', '39px auto');
         Game.showHideInterface = 0;
+        document.getElementById('slideButton').innerHTML = "<";
         //console.log('boolean: ' + Game.showHideInterface);
     }
     
