@@ -23,7 +23,7 @@ function onEachFeatureCommissariats(features, layer) {
 }
 
 //import museum data and put the name in the popup
-var museesLayer = L.geoJson(musees, {
+/*var museesLayer = L.geoJson(musees, {
     onEachFeature: onEachFeatureMusees
 }).addTo(map);
 
@@ -50,4 +50,4 @@ var overlayMaps = {
     "Musees": museesLayer 
 };
 
-L.control.layers(baseMaps, overlayMaps).addTo(map);
+L.control.layers(baseMaps, overlayMaps).addTo(map);*/

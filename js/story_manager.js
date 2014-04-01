@@ -34,7 +34,7 @@ function story_manager(){
     }
 }
 
-museesLayer.on('click', function(){
+/*museesLayer.on('click', function(){
 	window.ref="A002";
 	story_manager();
-});
+});*/

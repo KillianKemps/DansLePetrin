@@ -31,8 +31,25 @@ var heros = L.marker([48.83478, 2.3679], {title:'Heros', icon:herosIcon, draggab
 
 /* Generating circle around the heros */
 
-var circle = L.circle(heros.getLatLng(), 700, {
+var circle = L.circle(heros.getLatLng(), 1400, {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5
 }).addTo(map);
+
+function onEachFeatureCommissariats(features, layer) {
+    //link name to the popup of the marker
+        layer.bindPopup("Commissariat");
+}
+
+
+var commissariatsLayer = L.geoJson(commissariats, {
+    onEachFeature: onEachFeatureCommissariats
+}).addTo(map);
+
+if(circle.getBounds().contains(commissariatsLayer)){
+    console.log('contains');
+}
+else{
+    console.log('not contains');
+}
