@@ -48,6 +48,7 @@ display: none; */
 #showHideInterface{
 	position: absolute;
 	left: 50px;
+	top:10px;
 }
 
 /** --- = @section COMPONENT ---*/
@@ -59,7 +60,7 @@ display: none; */
 
 .dialogMenu {	
 	z-index: 2;
-	background-color: white;
+	background-color: rgba(255,255,255,0.9);
 
 	width: 650px;
 	height: auto;
@@ -106,4 +107,8 @@ display: none; */
 	display: block;
 	margin-top: 50px;
 	padding-bottom: 70px;
+}
+
+.dialogMenu li{
+	list-style-type: none;
 }
