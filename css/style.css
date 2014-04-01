@@ -45,7 +45,7 @@ display: none; */
 	width: 18px;
 	height: 18px;
 }
-#showInterface{
+#showHideInterface{
 	position: absolute;
 	left: 50px;
 }

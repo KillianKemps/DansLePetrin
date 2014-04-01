@@ -52,3 +52,20 @@ heros.on('drag', function(event){
             var coordinates = heros.getLatLng();
             circle.setLatLng(coordinates);
 });
+
+function showHideInterface(){
+    if (!Game.showHideInterface) {
+        $('#interfaceBlock').animate({
+            marginLeft: '-630px'
+        }, 500);
+        Game.showHideInterface = 1;
+        //console.log('boolean: ' + Game.showHideInterface);
+    }
+    else{
+        $('#interfaceBlock').css('margin', '39px auto');
+        Game.showHideInterface = 0;
+        //console.log('boolean: ' + Game.showHideInterface);
+    }
+    
+    //console.log('Clicked');
+}

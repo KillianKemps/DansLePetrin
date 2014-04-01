@@ -12,7 +12,7 @@
 	<body>
 
 		<div id="map"></div>
-		<button id="showInterface" onClick="story_manager()">Show interface</button>
+		<button id="showHideInterface" onClick="showHideInterface()">Show/Hide interface</button>
 		<div id="interfaceBlock" class="dialogMenu">
 			<input id="closebutton" type="button" onclick="onClickclose()">
 			<h2 id="title">Bienvenue,</h2>
@@ -24,7 +24,7 @@
 
 			<a href="#"><img src="img/histoire.png"/></a>
 			<a href="#"><img src="img/propos.png"/></a>
-			<a href="#"><img src="img/start.png" id="start"/></a></p>
+			<a href="#"><img src="img/start.png" id="start" onClick="story_manager()"/></a></p>
 			<ul id="conseq_ref">
 			</ul>
 		<!-- <input id="visitbutton" type="button" value="Visit"> -->
@@ -32,6 +32,7 @@
 
 	
 		<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+		<script type="text/javascript" src="lib/jquery.js"></script>
 		<!--<script src="data/liste_des_musees_franciliens.js"></script>-->
 		<script src="data/musees.js"></script>
 		<script src="data/hotels.js"></script>
