@@ -17,14 +17,17 @@
 }
 
 #interfaceBlock{
-	color: white;
-	position: absolute;
-	top:10%;
-	height:70%;
-	width: 20%;
-	border: solid black 1px;
-	background-color: black; 
-	display: none;
+	/* color: white; */
+	/* position: absolute;
+	top:50px; */
+/* 	height:70%;
+width: 20%;
+border: solid black 1px;
+background-color: black; 
+display: none; */
+}
+#interfaceBlock ul{
+	padding-bottom: 50px;
 }
 #visitbutton {
 	position: absolute;
@@ -50,3 +53,57 @@
 /** --- = @section COMPONENT ---*/
 /** --- = @section IE ---*/
 
+/****************7
+	dialogMenu
+******************/
+
+.dialogMenu {	
+	z-index: 2;
+	background-color: white;
+
+	width: 650px;
+	height: auto;
+
+	margin: auto;
+	margin-top: 39px;
+
+	border-radius: 5px;
+
+	box-shadow: 1px 1px 12px #555;
+
+	opacity: 0.9;
+
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.dialogMenu h2 {	
+	/* width: 115px; */
+	width: 500px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.dialogMenu p {	
+	width: 500px;
+	margin: auto;
+	margin-top: 47px;
+
+	font-size: 0.750em;
+
+	text-align: center;
+}
+
+.dialogMenu img { 
+/* 	margin-left: 165px; */
+	margin-left: 20px;
+}
+
+.dialogMenu img#start {	
+	width: 134px;
+	margin: auto;
+	padding-left: 0px;
+	display: block;
+	margin-top: 50px;
+	padding-bottom: 70px;
+}
