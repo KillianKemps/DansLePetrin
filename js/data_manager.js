@@ -51,18 +51,28 @@ var overlayMaps = {
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
-var markerTest = [];
+var markerMusees = [];
+var markerCommissariats = [];
 
 /** Alternative import of museums*/
 for (var i = 0; i < musees.features.length; i++) {
-    console.log('ok');
-            markerTest[i] = new L.marker([musees.features[i].properties.wgs84[0],musees.features[i].properties.wgs84[1]])
+    /*console.log('ok');*/
+            markerMusees[i] = new L.marker([musees.features[i].properties.wgs84[0],musees.features[i].properties.wgs84[1]])
                 .bindPopup(musees.features[i].properties.nom_du_musee);
                 /*.addTo(map);*/
 }
 
-console.log('musees: ' + musees);
+for (var i = 0; i < commissariats.features.length; i++) {
+    /*console.log('ok');*/
+            markerCommissariats[i] = new L.marker([commissariats.features[i].properties.coordinates[0],commissariats.features[i].properties.coordinates[1]])
+                .bindPopup("Commissariat");
+                /*.addTo(map);*/
+                console.log(markerCommissariats[i]);
+    console.log('coordinates: ' + commissariats.features[i].properties.coordinates[0] + ' | '+commissariats.features[i].properties.coordinates[1] )
+}
 
+/*console.log('musees: ' + musees);
+*/
 /*console.log('coords: ' + L.geoJson(commissariats, {
     onEachFeature: onEachFeatureCommissariats
 }).coordsToLatLngs(commissariats, 1, 0) );*/

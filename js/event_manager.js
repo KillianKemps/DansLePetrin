@@ -48,8 +48,8 @@ map.on('click', onMapClick);
 
 hotelsLayer.on('click', changeIcon);
 
-heros.on('drag', function(event){
-            var coordinates = heros.getLatLng();
+hero.on('drag', function(event){
+            var coordinates = hero.getLatLng();
             circle.setLatLng(coordinates);
 });
 

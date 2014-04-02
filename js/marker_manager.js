@@ -23,46 +23,54 @@ var fastfoodIcon = L.icon({
             popupAnchor: [0, -28]
         });
 
-var herosIcon = L.icon({
+var heroIcon = L.icon({
             iconUrl: 'img/digsby.png',
             iconSize: [32, 37],
             iconAnchor: [16, 25],
             popupAnchor: [0, -28]
         });
 
-var heros = L.marker([48.83478, 2.3679], {title:'Heros', icon:herosIcon, draggable: true}).addTo(map);
+var hero = L.marker([48.83478, 2.3679], {title:'hero', icon:heroIcon, draggable: true}).addTo(map);
 
-console.log('marker2:' + marker2);
-console.log('herosLat: ' + heros.getLatLng());
-var distance = marker2.getLatLng().distanceTo(heros.getLatLng());
-console.log('distance: ' + distance);
+
 
     
-heros.on('drag',(function(e){
-    var distance = marker2.getLatLng().distanceTo(heros.getLatLng());
+hero.on('drag',(function(e){
+    var distance = marker2.getLatLng().distanceTo(hero.getLatLng());
 
-            marker2.addTo(map);
-
-    for (var i = 0; i < musees.features.length; i++) {
-        var distance = markerTest[i].getLatLng().distanceTo(heros.getLatLng());
-        console.log('markerTest distance : ' + distance);
-        markerTest[i].addTo(map);
-        console.log('markerTest: ' + markerTest[i]);
+    marker2.addTo(map);
         if (distance > 700) {
-            map.removeLayer(markerTest[i]);
-        };
-    }
-    if (distance > 700) {
 
         map.removeLayer(marker2);
-        
-
 
      }
+
+    for (var i = 0; i < musees.features.length; i++) {
+        var distanceMusees = markerMusees[i].getLatLng().distanceTo(hero.getLatLng());
+
+        if (distanceMusees > 700) {
+            map.removeLayer(markerMusees[i]);
+        }
+        else{
+            markerMusees[i].addTo(map);
+        }
+    }
+    for (var i = 0; i < commissariats.features.length; i++) {
+            var distanceCommissariats = markerCommissariats[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceCommissariats > 700) {
+                map.removeLayer(markerCommissariats[i]);
+            }
+            else{
+                markerCommissariats[i].addTo(map);
+            }
+        }
+
+
 }));
 
-/* Generating circle around the heros */
-var circle = L.circle(heros.getLatLng(), 700, {
+/* Generating circle around the hero */
+var circle = L.circle(hero.getLatLng(), 700, {
     color: 'black',
     weight: 5,
     fillColor: '#f03',
