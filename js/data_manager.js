@@ -66,3 +66,4 @@ console.log('musees: ' + musees);
 /*console.log('coords: ' + L.geoJson(commissariats, {
     onEachFeature: onEachFeatureCommissariats
 }).coordsToLatLngs(commissariats, 1, 0) );*/
+
