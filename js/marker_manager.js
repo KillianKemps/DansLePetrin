@@ -75,6 +75,18 @@ hero.on('drag',(function(e){
                 markerHopitaux[i].addTo(map);
             }
     }
+    for (var i = 0; i < pub.elements.length; i++) {
+        if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
+        var distancePub = markerPub[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distancePub > 700) {
+                map.removeLayer(markerPub[i]);
+            }
+            else{
+                markerPub[i].addTo(map);
+            }
+        }
+    }
 
 }));
 

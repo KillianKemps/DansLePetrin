@@ -54,32 +54,49 @@ L.control.layers(baseMaps, overlayMaps).addTo(map);
 var markerMusees = [];
 var markerCommissariats = [];
 var markerHopitaux = [];
+var markerPub = [];
 
 /** Alternative import of museums*/
 for (var i = 0; i < musees.features.length; i++) {
-    /*console.log('ok');*/
             markerMusees[i] = new L.marker([musees.features[i].properties.wgs84[0],musees.features[i].properties.wgs84[1]])
                 .bindPopup(musees.features[i].properties.nom_du_musee);
-                /*.addTo(map);*/
 }
 
 for (var i = 0; i < commissariats.features.length; i++) {
-    /*console.log('ok');*/
             markerCommissariats[i] = new L.marker([commissariats.features[i].properties.coordinates[0],commissariats.features[i].properties.coordinates[1]])
                 .bindPopup("Commissariat");
-                /*.addTo(map);*/
-                //console.log(markerCommissariats[i]);
-    //console.log('coordinates: ' + commissariats.features[i].properties.coordinates[0] + ' | '+commissariats.features[i].properties.coordinates[1] )
 }
 
 for (var i = 0; i < hopitaux.features.length; i++) {
-    /*console.log('ok');*/
+
             markerHopitaux[i] = new L.marker([hopitaux.features[i].geometry.coordinates[1], hopitaux.features[i].geometry.coordinates[0]])
                 .bindPopup(hopitaux.features[i].properties.raison_sociale);
-                /*.addTo(map);*/
-                console.log(markerCommissariats[i]);
-    console.log('coordinates: ' + hopitaux.features[i].geometry.coordinates[1] + hopitaux.features[i].geometry.coordinates[0])
 }
+
+for (var i = 0; i < pub.elements.length; i++) {
+    /*console.log('ok');*/
+    if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
+
+        /*if(pub.elements[i].tags.name){//If there is a name
+            markerPub[i] = new L.marker([pub.elements[i].lat, pub.elements[i].lon])
+                .bindPopup(pub.elements[i].tags.name);
+        }
+        else{*/
+            markerPub[i] = new L.marker([pub.elements[i].lat, pub.elements[i].lon])
+                .bindPopup("Pub");
+        /*}*/
+       
+                /*.addTo(map);*/
+               // console.log(markerPub[i]);
+        //console.log('coordinates: ' + pub.elements[i].lat + pub.elements[i].lon);
+    }
+            
+}
+/*    if(!pub.elements[i].lat  || !pub.elements[i].lon)
+    {
+        console.log('Found');
+    }*/
+
 
 /*console.log('musees: ' + musees);
 */
