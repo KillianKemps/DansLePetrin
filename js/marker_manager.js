@@ -40,15 +40,17 @@ console.log('distance: ' + distance);
     
 heros.on('drag',(function(e){
     var distance = marker2.getLatLng().distanceTo(heros.getLatLng());
-    if (distance < 700) {
-         marker2.addTo(map); 
+            marker2.addTo(map);
+    if (distance > 700) {
+
+        map.removeLayer(marker2);
      }
 }));
 
 /* Generating circle around the heros */
-
 var circle = L.circle(heros.getLatLng(), 700, {
-    color: 'red',
+    color: 'black',
+    weight: 5,
     fillColor: '#f03',
-    fillOpacity: 0.5
+    fillOpacity: 0,
 }).addTo(map);
