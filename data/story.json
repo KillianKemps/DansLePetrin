@@ -63,7 +63,7 @@
     "description": "Après\n avoir retrouvé Madame Irma au commisariat, celle ci vous prédit votre \navenir et vous envoie directement vers une bijouterie qu’elle a vue dans\n une de ses visions.",
     "conseq_ref": [
       [
-        "A008",
+        "A006",
         "Vous vous rendez directement à la bijouterie. Les voyantes ont toujours raison.",
         "bijouterie"
       ]
