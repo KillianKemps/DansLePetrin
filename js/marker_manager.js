@@ -65,7 +65,16 @@ hero.on('drag',(function(e){
                 markerCommissariats[i].addTo(map);
             }
         }
+    for (var i = 0; i < hopitaux.features.length; i++) {
+        var distanceHopitaux = markerHopitaux[i].getLatLng().distanceTo(hero.getLatLng());
 
+            if (distanceHopitaux > 700) {
+                map.removeLayer(markerHopitaux[i]);
+            }
+            else{
+                markerHopitaux[i].addTo(map);
+            }
+    }
 
 }));
 

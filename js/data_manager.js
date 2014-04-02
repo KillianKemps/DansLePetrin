@@ -53,6 +53,7 @@ L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 var markerMusees = [];
 var markerCommissariats = [];
+var markerHopitaux = [];
 
 /** Alternative import of museums*/
 for (var i = 0; i < musees.features.length; i++) {
@@ -67,8 +68,17 @@ for (var i = 0; i < commissariats.features.length; i++) {
             markerCommissariats[i] = new L.marker([commissariats.features[i].properties.coordinates[0],commissariats.features[i].properties.coordinates[1]])
                 .bindPopup("Commissariat");
                 /*.addTo(map);*/
+                //console.log(markerCommissariats[i]);
+    //console.log('coordinates: ' + commissariats.features[i].properties.coordinates[0] + ' | '+commissariats.features[i].properties.coordinates[1] )
+}
+
+for (var i = 0; i < hopitaux.features.length; i++) {
+    /*console.log('ok');*/
+            markerHopitaux[i] = new L.marker([hopitaux.features[i].geometry.coordinates[1], hopitaux.features[i].geometry.coordinates[0]])
+                .bindPopup(hopitaux.features[i].properties.raison_sociale);
+                /*.addTo(map);*/
                 console.log(markerCommissariats[i]);
-    console.log('coordinates: ' + commissariats.features[i].properties.coordinates[0] + ' | '+commissariats.features[i].properties.coordinates[1] )
+    console.log('coordinates: ' + hopitaux.features[i].geometry.coordinates[1] + hopitaux.features[i].geometry.coordinates[0])
 }
 
 /*console.log('musees: ' + musees);
