@@ -49,12 +49,12 @@
       [
         "A006",
         "Vous choisissez d’acheter fémina, qui vous conseille de vous rendre à une bijouterie.",
-        "kiosque"
+        "bijouterie"
       ],
       [
         "A007",
         "Vous préférez lire Dragon Ball Z",
-        "kiosque"
+        "moi"
       ]
     ]
   },
@@ -71,7 +71,7 @@
   },
   "A006": {
     "title": "Tomber à pic",
-    "description": "Vous\n croisez votre patron dans la rue avant d’atteindre la bijouterie. \nCelui-ci, surpris de vous voir, vous annonce qu’il tente à tous prix \nd’échapper à sa femme. Il vous demande de l’aider.",
+    "description": "Vous croisez votre patron dans la rue avant d’atteindre la bijouterie. Celui-ci, surpris de vous voir, se dirige vers vous pour vous rappeler toutes les tâches qu’il reste à faire avant lundi. Il vous demande donc de vous rendre à la mairie pour régler des problèmes administratifs...",
     "conseq_ref": [
       [
         "A008",
@@ -80,8 +80,8 @@
       ],
       [
         "A009",
-        "Vous\n acceptez de l’aider. Par réflexe, votre patron vous demande un café, \npuis de finir 3 dossiers en retard et aussi d’aller faire ses courses.",
-        "café"
+        "N’ayant pas trop envie de encore vous retrouvez sous le bureau de votre patron, vous vous résignez a passer à la mairie",
+        "mairie"
       ]
     ]
   },
@@ -92,7 +92,7 @@
       [
         "A001",
         "Vous posez gentillement votre manga, et suivez votre petite amie…",
-        "kiosque"
+        "moi"
       ]
     ]
   },
@@ -102,13 +102,29 @@
     "conseq_ref": [
       [
         "A010",
-        "Vous préférez tout de même accomplir votre quête en priorité, et vous continuez votre route pour la bijouterie",
+        "Bien qu’une bière vous fasse envie, des souvenirs de soirées récentes passées avec vos amis refont surface ; vous ne vous souvenez d’ailleurs plus grand chose après avoir pris ce verre qui contenait une pillule, une aspirine d’après vos amis. Seul un certain mal au fessier persite de cette soirée étrange. Votre intuition vous pousse à passer votre chemin, et continuer en direction de la librairie.",
         "bijouterie"
       ],
       [
         "A011",
-        "Après tout, une petite bière pour la route, ca ne fait pas de mal ! Vous vous dirigez vers le bar le plus proche avec vos amis.",
+        "Vos pieds et votre estomac ayant apparemment déjà prit la décision pour vous par pur réflexe en réponse à l’appel de la bière, vous vous dirigez vers un bar avec votre bande de potes.",
         "bar"
+      ]
+    ]
+  },
+  "A009": {
+    "title": "Théorie de l'évolution",
+    "description": "Une fois à la mairie, vous croisez votre collègue Jean-Patrick. Celui ci est encore en train de travailler un dimanche...",
+    "conseq_ref": [
+      [
+        "A012",
+        "Votre raison et votre coeur vous empêchent de reléguer votre tâche, et vous préférez donc vous y atteler. Une fois finie, vous retournez voir votre patron",
+        "moi"
+      ],
+      [
+        "A013",
+        "Vous lui remettez la mission que votre patron vous a confié, et vous pouvez donc vous rediriger vers la bijouterie pour finir votre mission.",
+        "bijouterie"
       ]
     ]
   }
