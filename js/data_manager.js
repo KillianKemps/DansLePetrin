@@ -39,7 +39,6 @@ var commissariatsLayer = L.geoJson(commissariats, {
     onEachFeature: onEachFeatureCommissariats
 });
 
-
 var baseMaps = {
 };
 
@@ -51,3 +50,7 @@ var overlayMaps = {
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+console.log('coords: ' + L.geoJson(commissariats, {
+    onEachFeature: onEachFeatureCommissariats
+}).coordsToLatLngs(commissariats, 1, 0) );
