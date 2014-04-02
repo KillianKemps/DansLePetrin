@@ -31,10 +31,30 @@ function story_manager(){
     	/* Bind a choice to the li element */
     	var choice = document.createTextNode(story[window.ref].conseq_ref[conseq][1]);
     	button.appendChild(choice);
+
+        /** Bind choice to marker type **/
+        if(story[window.ref].conseq_ref[conseq][2] === "musees"){  // !! Check if correct !!
+                   museesLayer.on('click', function(){
+                    window.ref = story[window.ref].conseq_ref[conseq][0];
+                    story_manager();
+                }); 
+        }
+        else if(story[window.ref].conseq_ref[conseq][2] === "commissariat"){
+                   commissariatsLayer.on('click', function(){
+                    window.ref = story[window.ref].conseq_ref[conseq][0];
+                    story_manager();
+                }); 
+        }
+        else if(story[window.ref].conseq_ref[conseq][2] === "hopitaux"){
+                   hopitauxLayer.on('click', function(){
+                    window.ref = story[window.ref].conseq_ref[conseq][0];
+                    story_manager();
+                }); 
+        }
+        else{
+            
+        }
+
     }
 }
 
-museesLayer.on('click', function(){
-	window.ref="A002";
-	story_manager();
-});

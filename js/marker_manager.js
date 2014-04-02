@@ -40,10 +40,24 @@ console.log('distance: ' + distance);
     
 heros.on('drag',(function(e){
     var distance = marker2.getLatLng().distanceTo(heros.getLatLng());
+
             marker2.addTo(map);
+
+    for (var i = 0; i < musees.features.length; i++) {
+        var distance = markerTest[i].getLatLng().distanceTo(heros.getLatLng());
+        console.log('markerTest distance : ' + distance);
+        markerTest[i].addTo(map);
+        console.log('markerTest: ' + markerTest[i]);
+        if (distance > 700) {
+            map.removeLayer(markerTest[i]);
+        };
+    }
     if (distance > 700) {
 
         map.removeLayer(marker2);
+        
+
+
      }
 }));
 
