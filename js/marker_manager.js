@@ -32,9 +32,62 @@ var heroIcon = L.icon({
 
 var hero = L.marker([48.83478, 2.3679], {title:'hero', icon:heroIcon, draggable: true}).addTo(map);
 
+//display data when site is opened
+ for (var i = 0; i < pub.elements.length; i++) {
+        if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
+        var distancePub = markerPub[i].getLatLng().distanceTo(hero.getLatLng());
 
+            if (distancePub > 700) {
+                //map.removeLayer(markerPub[i]);
+                pubsLayer.removeLayer(markerPub[i]);
+            }
+            else{
+                //markerPub[i].addTo(map);
+                markerPub[i].addTo(pubsLayer);
+            }
+        }
+    }
 
+for (var i = 0; i < musees.features.length; i++) {
+        var distanceMusees = markerMusees[i].getLatLng().distanceTo(hero.getLatLng());
+
+        if (distanceMusees > 700) {
+            //map.removeLayer(markerMusees[i]);
+            //map.removeLayer(museesLayer);
+            museesLayer.removeLayer(markerMusees[i]);
+            
+        }
+        else{
+            //markerMusees[i].addTo(map);
+            markerMusees[i].addTo(museesLayer);
+        }
+    }
+    for (var i = 0; i < commissariats.features.length; i++) {
+        var distanceCommissariats = markerCommissariats[i].getLatLng().distanceTo(hero.getLatLng());
+
+        if (distanceCommissariats > 700) {
+            //map.removeLayer(markerCommissariats[i]);
+            commissariatsLayer.removeLayer(markerCommissariats[i]);
+        }
+        else{
+            //markerCommissariats[i].addTo(map);
+            markerCommissariats[i].addTo(commissariatsLayer);
+        }
+    }
+    for (var i = 0; i < hopitaux.features.length; i++) {
+        var distanceHopitaux = markerHopitaux[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceHopitaux > 700) {
+                //map.removeLayer(markerHopitaux[i]);
+                hopitauxLayer.removeLayer(markerHopitaux[i]);
+            }
+            else{
+                //markerHopitaux[i].addTo(map);
+                markerHopitaux[i].addTo(hopitauxLayer);
+            }
+    }
     
+//Display data when hero is moving
 hero.on('drag',(function(e){
     var distance = marker2.getLatLng().distanceTo(hero.getLatLng());
 
