@@ -53,6 +53,10 @@ hero.on('drag', function(event){
             circle.setLatLng(coordinates);
 });
 
+hero.on('dragend', function(event){
+    map.setView(hero.getLatLng(), 13);
+})
+
 function showHideInterface(){
     if (!Game.showHideInterface) {
         $('#interfaceBlock').animate({
