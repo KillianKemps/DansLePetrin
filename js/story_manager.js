@@ -1,12 +1,6 @@
 /*****************************************************************/
 /* Importing story data and managin it                           */
 
-console.log(story.A001.title);
-console.log(story.A001.description);
-for ( var conseq in story.A001.conseq_ref)
-console.log(conseq.ref);
-
-
 window.ref = "A001"; //Init first step
 
 function story_manager(){
@@ -34,22 +28,40 @@ function story_manager(){
 
         /** Bind choice to marker type **/
         if(story[window.ref].conseq_ref[conseq][2] === "musees"){  // !! Check if correct !!
-                   museesLayer.on('click', function(){
+            for (var i = 0; i < musees.features.length; i++) {
+                    markerMusees[i].on('click', function(){
                     window.ref = story[window.ref].conseq_ref[conseq][0];
                     story_manager();
-                }); 
+                });
+            } 
         }
         else if(story[window.ref].conseq_ref[conseq][2] === "commissariat"){
-                   commissariatsLayer.on('click', function(){
+            for (var i = 0; i < commissariats.features.length; i++) {
+                    markerCommissariats[i].on('click', function(){
                     window.ref = story[window.ref].conseq_ref[conseq][0];
                     story_manager();
-                }); 
+                });
+            } 
         }
         else if(story[window.ref].conseq_ref[conseq][2] === "hopitaux"){
-                   hopitauxLayer.on('click', function(){
+            for (var i = 0; i < hopitaux.features.length; i++) {
+                    markerHopitaux[i].on('click', function(){
                     window.ref = story[window.ref].conseq_ref[conseq][0];
                     story_manager();
                 }); 
+            }
+        }
+        else if(story[window.ref].conseq_ref[conseq][2] === "bar"){
+            for (var i = 0; i < pub.elements.length; i++) { 
+                if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
+
+                    markerPub[i].on('click', function(){
+                    window.ref = story[window.ref].conseq_ref[conseq][0];
+                    story_manager();
+                    //console.log('Pub click');
+                    }); 
+                }   
+            }
         }
         else{
             
