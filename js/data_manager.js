@@ -27,7 +27,7 @@ function onEachFeatureCommissariats(features, layer) {
     onEachFeature: onEachFeatureMusees
 });*/
 
-var hotelsLayer = L.geoJson(hotels, {
+/*var hotelsLayer = L.geoJson(hotels, {
     onEachFeature: onEachFeatureHotels
 });
 
@@ -37,7 +37,13 @@ var hopitauxLayer = L.geoJson(hopitaux, {
 
 var commissariatsLayer = L.geoJson(commissariats, {
     onEachFeature: onEachFeatureCommissariats
-});
+});*/
+
+var museesLayer = L.layerGroup();
+var hopitauxLayer = L.layerGroup();
+var commissariatsLayer = L.layerGroup();
+//var hotelsLayer = L.layerGroup();
+var pubsLayer = L.layerGroup();
 
 var baseMaps = {
 };
@@ -45,16 +51,24 @@ var baseMaps = {
 var overlayMaps = {
     "Commissariats": commissariatsLayer,
     "Hopitaux": hopitauxLayer, 
-    "Hotels": hotelsLayer/*,
-    "Musees": museesLayer */
+    //"Hotels": hotelsLayer,
+    "Musees": museesLayer,
+    "Pub": pubsLayer
 };
-
-L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 var markerMusees = [];
 var markerCommissariats = [];
 var markerHopitaux = [];
 var markerPub = [];
+
+museesLayer.addTo(map);
+hopitauxLayer.addTo(map);
+commissariatsLayer.addTo(map);
+//hotelsLayer.addTo(map);
+pubsLayer.addTo(map);
+
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+
 
 /** Alternative import of museums*/
 for (var i = 0; i < musees.features.length; i++) {

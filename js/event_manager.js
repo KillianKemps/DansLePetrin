@@ -46,7 +46,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 */
 
-hotelsLayer.on('click', changeIcon);
+//hotelsLayer.on('click', changeIcon);
 
 hero.on('drag', function(event){
             var coordinates = hero.getLatLng();
