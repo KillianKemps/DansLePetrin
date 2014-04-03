@@ -39,11 +39,11 @@ var commissariatsLayer = L.geoJson(commissariats, {
     onEachFeature: onEachFeatureCommissariats
 });*/
 
-var museesLayer = L.layerGroup();
-var hopitauxLayer = L.layerGroup();
-var commissariatsLayer = L.layerGroup();
+var museesLayer = L.featureGroup();
+var hopitauxLayer = L.featureGroup();
+var commissariatsLayer = L.featureGroup();
 //var hotelsLayer = L.layerGroup();
-var pubsLayer = L.layerGroup();
+var pubsLayer = L.featureGroup();
 
 var baseMaps = {
 };
