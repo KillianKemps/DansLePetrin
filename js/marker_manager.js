@@ -16,13 +16,6 @@ var marker2 = L.marker([48.852, 2.389], {
 //add popup on marker
 marker2.bindPopup("I'm showing the interface ! ");
 
-var fastfoodIcon = L.icon({
-            iconUrl: 'img/fastfood.png',
-            iconSize: [32, 37],
-            iconAnchor: [16, 37],
-            popupAnchor: [0, -28]
-        });
-
 var heroIcon = L.icon({
             iconUrl: 'img/digsby.png',
             iconSize: [32, 37],
