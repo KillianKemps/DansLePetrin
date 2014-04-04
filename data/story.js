@@ -22,7 +22,7 @@ var story = {
       [
         "A001",
         "Réessayer",
-        ""
+        "reset"
       ]
     ]
   },

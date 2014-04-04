@@ -23,7 +23,7 @@ var heroIcon = L.icon({
             popupAnchor: [0, -28]
         });
 
-var hero = L.marker([48.83478, 2.3679], {title:'hero', icon:heroIcon, draggable: true}).addTo(map);
+var hero = L.marker([48.83478, 2.3679], {title:'hero', icon:heroIcon, draggable: true, zIndexOffset: 1000}).addTo(map);
 
 function displayMarker(){
     var distance = marker2.getLatLng().distanceTo(hero.getLatLng());
