@@ -79,6 +79,10 @@ function showHideInterface(){
 //Set hero position to clicked marker
 /*for (var i = 0; i < markerMusees.length; i++) {
     markerMusees[i].on('click', function(event) {*/
+hero.on('click', function(event){
+    storyNext('moi');
+})
+
 function moveMarker(marker, condition){
         switch(condition){
             case 'bar':
