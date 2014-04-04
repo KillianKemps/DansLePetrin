@@ -83,6 +83,7 @@ function moveMarkerMusees(marker){
         var position = markerMusees[marker].getLatLng();
         hero.setLatLng(position);
         circle.setLatLng(position);
+        polyline.addLatLng(position);
         displayMarker();
         map.setView(position, 15);    
 }
@@ -101,6 +102,7 @@ function moveMarkerCommissariats(marker){
         var position = markerCommissariats[marker].getLatLng();
         hero.setLatLng(position);
         circle.setLatLng(position);
+        polyline.addLatLng(position);
         displayMarker();
         map.setView(position, 15);
 }
@@ -119,6 +121,7 @@ function moveMarkerHopitaux(marker){
         var position = markerHopitaux[marker].getLatLng();
         hero.setLatLng(position);
         circle.setLatLng(position);
+        polyline.addLatLng(position);
         displayMarker();
         map.setView(position, 15);
    //});
@@ -148,6 +151,7 @@ function moveMarkerPub(marker){
         var position = markerPub[marker].getLatLng();
         hero.setLatLng(position);
         circle.setLatLng(position);
+        polyline.addLatLng(position);
         displayMarker();
         map.setView(position, 15);
     //});

@@ -102,3 +102,5 @@ var circle = L.circle(hero.getLatLng(), 700, {
     fillColor: '#f03',
     fillOpacity: 0,
 }).addTo(map);
+
+var polyline = L.polyline([]).addTo(map);
