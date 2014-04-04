@@ -114,3 +114,12 @@ display: none; */
 .dialogMenu li{
 	list-style-type: none;
 }
+
+/** Info Lieu Popup **/
+.info_lieu h2{
+	text-align: center;
+}
+.info_lieu img{
+	margin: 0 auto;
+	cursor: pointer;
+}
