@@ -88,6 +88,20 @@ function displayMarker(){
             }
         }
     }
+    for (var i = 0; i < markerMairies.length; i++) {
+
+        var distanceMairie = markerMairies[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceMairie > 700) {
+                //map.removeLayer(markerPub[i]);
+                mairiesLayer.removeLayer(markerMairies[i]);
+            }
+            else{
+                //markerPub[i].addTo(map);
+                markerMairies[i].addTo(mairiesLayer);
+            }
+        
+    }
 }
  
 //Display data when site is opened    

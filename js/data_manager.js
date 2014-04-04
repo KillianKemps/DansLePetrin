@@ -7,6 +7,7 @@ var hopitauxLayer = L.featureGroup();
 var commissariatsLayer = L.featureGroup();
 //var hotelsLayer = L.layerGroup();
 var pubsLayer = L.featureGroup();
+var mairiesLayer = L.featureGroup();
 
 var baseMaps = {
 };
@@ -23,12 +24,15 @@ var markerMusees = [];
 var markerCommissariats = [];
 var markerHopitaux = [];
 var markerPub = [];
+var markerMairies = [];
+
 
 museesLayer.addTo(map);
 hopitauxLayer.addTo(map);
 commissariatsLayer.addTo(map);
 //hotelsLayer.addTo(map);
 pubsLayer.addTo(map);
+mairiesLayer.addTo(map);
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
@@ -59,6 +63,12 @@ var commissariatIcon = L.icon({
 });
 var museeIcon = L.icon({
             iconUrl: 'img/museum_art.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+});
+var mairieIcon = L.icon({
+            iconUrl: 'img/administration.png',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
@@ -102,6 +112,20 @@ for (var i = 0; i < pub.elements.length; i++) {
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">Pub</h2>"+
                 "<a onclick=\"moveMarker(" + i + ", 'bar' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "</div>"
+                );
+    }
+            
+}
+
+for (var i = 0; i < mairies.records.length; i++) {
+
+    if(mairies.records[i].fields.lat_lng){ //Protect if data corrumpted
+
+        markerMairies[i] = new L.marker(mairies.records[i].fields.lat_lng, {icon: mairieIcon})
+            .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">"+ mairies.records[i].fields.nom + "</h2>"+
+                "<a onclick=\"moveMarker(" + i + ", 'mairie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
     }

@@ -56,6 +56,11 @@ function story_manager(){
                 image.setAttribute('src', "img/police.png");
                 button.appendChild(image); 
             break;
+            case 'mairie':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/administration.png");
+                button.appendChild(image); 
+            break;
 
         }
 

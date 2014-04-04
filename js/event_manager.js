@@ -97,7 +97,9 @@ function moveMarker(marker, condition){
             case 'commissariat':
                 var position = markerCommissariats[marker].getLatLng();
             break;
-
+            case 'mairie':
+                var position = markerMairies[marker].getLatLng();
+            break;
         }
         
         hero.setLatLng(position);

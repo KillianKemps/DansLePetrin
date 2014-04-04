@@ -1,0 +1,375 @@
+var mairies = {
+
+    "nhits": 21,
+    "parameters": {
+        "rows": 10,
+        "format": "json",
+        "facet": [
+            "dept",
+            "type_orga"
+        ],
+        "dataset": [
+            "annuaire_de_l_administration_francilienne"
+        ],
+        "refine": {
+            "dept": "75",
+            "type_orga": "Mairie"
+        }
+    },
+    "records": [
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/59",
+            "fields": {
+                "nom": "Mairie du 5e arrondissement de Paris",
+                "tel": "+33 1 56 81 75 05",
+                "codepost": 75231,
+                "type_orga": "Mairie",
+                "adresse": "21 place du Panthéon<br />75231 PARIS CEDEX 05",
+                "horaires": "<Ouverture> <PlageJ debut=\\\"lundi\\\" fin=\\\"mercredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ></Ouverture>",
+                "orgaid": "Mairie-75105-01",
+                "precision": 8,
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.8462486267,
+                    2.34460401535
+                ],
+                "editeur": "Mairie du 5ème arrondissement",
+                "lat": 48.8462486267,
+                "codeinsee": 75105,
+                "lng": 2.34460401535
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.34460401535,
+                    48.8462486267
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/306",
+            "fields": {
+                "type_orga": "Mairie",
+                "tel": "+33 1 44 52 29 19",
+                "codepost": 75935,
+                "nom": "Mairie du 19e arrondissement de Paris",
+                "adresse": "Place Armand-Carrel<br />75935 Paris Cedex 19",
+                "site": "http://www.Mairie19.paris.fr",
+                "orgaid": "Mairie-75119-01",
+                "horaires": "<Ouverture> <PlageJ debut=\\\"lundi\\\" fin=\\\"mercredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ> <PlageJ debut=\\\"jeudi\\\" fin=\\\"jeudi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"19:30:00\\\"/> </PlageJ> <PlageJ debut=\\\"vendredi\\\" fin=\\\"vendredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ></Ouverture>",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2013-01-09",
+                "lat_lng": [
+                    48.8826560974,
+                    2.38213706017
+                ],
+                "precision": 6,
+                "editeur": "Mairie du 19e arrondissement de Paris",
+                "lat": 48.8826560974,
+                "mail": "https://teleservices.paris.fr/etatcivil/jsp/site/RunStandaloneApp.jsp?page=formengine&form=naissance",
+                "codeinsee": 75119,
+                "lng": 2.38213706017
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.38213706017,
+                    48.8826560974
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/8",
+            "fields": {
+                "nom": "Mairie du 1er arrondissement de Paris",
+                "tel": "+33 1 44 50 75 01",
+                "codepost": 75001,
+                "type_orga": "Mairie",
+                "adresse": "4 place du Louvre<br />75001 PARIS",
+                "precision": 8,
+                "orgaid": "Mairie-75101-01",
+                "site": "http://www.Mairie1.paris.fr",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.8600273132,
+                    2.34091997147
+                ],
+                "editeur": "Mairie du 1er arrondissement",
+                "lat": 48.8600273132,
+                "codeinsee": 75101,
+                "lng": 2.34091997147
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.34091997147,
+                    48.8600273132
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/31",
+            "fields": {
+                "type_orga": "Mairie",
+                "tel": "+33 1 53 01 75 03",
+                "codepost": 75141,
+                "nom": "Mairie du 3e arrondissement de Paris",
+                "adresse": "2 rue Eugène Spuller<br />75141 PARIS CEDEX 03",
+                "site": "http://www.Mairie3.paris.fr",
+                "orgaid": "Mairie-75103-01",
+                "horaires": "<Ouverture> <PlageJ debut=\\\"lundi\\\" fin=\\\"mercredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ> <PlageJ debut=\\\"jeudi\\\" fin=\\\"jeudi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"19:30:00\\\"/> </PlageJ> <PlageJ debut=\\\"vendredi\\\" fin=\\\"vendredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ></Ouverture>",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.864025116,
+                    2.36146998405
+                ],
+                "precision": 8,
+                "editeur": "Mairie du 3ème arrondissement",
+                "lat": 48.864025116,
+                "codeinsee": 75103,
+                "lng": 2.36146998405
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.36146998405,
+                    48.864025116
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/43",
+            "fields": {
+                "nom": "Mairie de Paris",
+                "tel": "3975",
+                "codepost": 75004,
+                "type_orga": "Mairie",
+                "adresse": "Place de l'Hôtel de Ville<br />75004 Paris",
+                "precision": 6,
+                "orgaid": "Mairie-75104-02",
+                "site": "http://www.paris.fr",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2012-12-11",
+                "lat_lng": [
+                    48.856803894,
+                    2.35105609894
+                ],
+                "editeur": "Mairie de Paris",
+                "lat": 48.856803894,
+                "codeinsee": 75104,
+                "lng": 2.35105609894
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.35105609894,
+                    48.856803894
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/67",
+            "fields": {
+                "type_orga": "Mairie",
+                "fax": "+33 1 40 46 76 19",
+                "tel": "+33 1 40 46 75 06",
+                "codepost": 75270,
+                "nom": "Mairie du 6e arrondissement de Paris",
+                "adresse": "78, rue Bonaparte<br />75270 Paris Cedex 06",
+                "site": "http://www.Mairie6.paris.fr",
+                "orgaid": "Mairie-75106-01",
+                "horaires": "<Ouverture> <PlageJ debut=\\\"lundi\\\" fin=\\\"mercredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ> <PlageJ debut=\\\"jeudi\\\" fin=\\\"jeudi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"19:30:00\\\"/> </PlageJ> <PlageJ debut=\\\"vendredi\\\" fin=\\\"vendredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ> <PlageJ debut=\\\"samedi\\\" fin=\\\"samedi\\\"> <PlageH debut=\\\"09:00:00\\\" fin=\\\"12:30:00\\\"/> <Note> état civil, uniquement pour les déclarations de naissance et de décès </Note> </PlageJ></Ouverture>",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2013-03-19",
+                "lat_lng": [
+                    48.850643158,
+                    2.33279395103
+                ],
+                "precision": 8,
+                "editeur": "Mairie du 6e arrondissement",
+                "lat": 48.850643158,
+                "codeinsee": 75106,
+                "lng": 2.33279395103
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.33279395103,
+                    48.850643158
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/150",
+            "fields": {
+                "type_orga": "Mairie",
+                "tel": "+33 1 44 68 12 12",
+                "codepost": 75570,
+                "nom": "Mairie du 12e arrondissement de Paris",
+                "adresse": "130 avenue Daumesnil<br />75570 PARIS CEDEX 12",
+                "site": "http://www.Mairie12.paris.fr",
+                "orgaid": "Mairie-75112-01",
+                "horaires": "<Ouverture> <PlageJ debut=\\\"lundi\\\" fin=\\\"mercredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ> <PlageJ debut=\\\"jeudi\\\" fin=\\\"jeudi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"19:30:00\\\"/> </PlageJ> <PlageJ debut=\\\"vendredi\\\" fin=\\\"vendredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ></Ouverture>",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.841217041,
+                    2.38853788376
+                ],
+                "precision": 8,
+                "editeur": "Mairie du 12ème arrondissement",
+                "lat": 48.841217041,
+                "codeinsee": 75112,
+                "lng": 2.38853788376
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.38853788376,
+                    48.841217041
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/46",
+            "fields": {
+                "nom": "Mairie du 4e arrondissement de Paris",
+                "tel": "+33 1 44 54 75 04",
+                "codepost": 75181,
+                "type_orga": "Mairie",
+                "adresse": "2 place Baudoyer<br />75181 PARIS CEDEX 04",
+                "precision": 8,
+                "orgaid": "Mairie-75104-01",
+                "site": "http://www.Mairie4.paris.fr",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.8562088013,
+                    2.35537910461
+                ],
+                "editeur": "Mairie du 4ème arrondissement",
+                "lat": 48.8562088013,
+                "codeinsee": 75104,
+                "lng": 2.35537910461
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.35537910461,
+                    48.8562088013
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/77",
+            "fields": {
+                "nom": "Mairie du 7e arrondissement de Paris",
+                "tel": "+33 1 53 58 75 07",
+                "codepost": 75340,
+                "type_orga": "Mairie",
+                "adresse": "116 rue de Grenelle<br />75340 PARIS CEDEX 07",
+                "precision": 8,
+                "orgaid": "Mairie-75107-01",
+                "site": "http://www.Mairie7.paris.fr",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.8568344116,
+                    2.31991100311
+                ],
+                "editeur": "Mairie du 7ème arrondissement",
+                "lat": 48.8568344116,
+                "codeinsee": 75107,
+                "lng": 2.31991100311
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.31991100311,
+                    48.8568344116
+                ]
+            }
+        },
+        {
+            "datasetid": "annuaire_de_l_administration_francilienne",
+            "recordid": "organismes_csv/96",
+            "fields": {
+                "type_orga": "Mairie",
+                "tel": "+33 1 42 46 72 09",
+                "codepost": 75436,
+                "nom": "Mairie du 9e arrondissement de Paris",
+                "adresse": "6 rue Drouot<br />75436 PARIS CEDEX 09",
+                "site": "http://www.Mairie9.paris.fr",
+                "orgaid": "Mairie-75109-01",
+                "horaires": "<Ouverture> <PlageJ debut=\\\"lundi\\\" fin=\\\"mercredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ> <PlageJ debut=\\\"jeudi\\\" fin=\\\"jeudi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"19:30:00\\\"/> </PlageJ> <PlageJ debut=\\\"vendredi\\\" fin=\\\"vendredi\\\"> <PlageH debut=\\\"08:30:00\\\" fin=\\\"17:00:00\\\"/> </PlageJ></Ouverture>",
+                "dept": 75,
+                "audience": "géopostale",
+                "datemaj": "2011-12-07",
+                "lat_lng": [
+                    48.872505188,
+                    2.34029006958
+                ],
+                "precision": 8,
+                "editeur": "Mairie du 9ème arrondissement",
+                "lat": 48.872505188,
+                "codeinsee": 75109,
+                "lng": 2.34029006958
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.34029006958,
+                    48.872505188
+                ]
+            }
+        }
+    ],
+    "facet_groups": [
+        {
+            "name": "dept",
+            "count": 21,
+            "facets": [
+                {
+                    "name": "75",
+                    "path": "75",
+                    "count": 21,
+                    "state": "refined"
+                }
+            ]
+        },
+        {
+            "name": "type_orga",
+            "count": 21,
+            "facets": [
+                {
+                    "name": "Mairie",
+                    "path": "Mairie",
+                    "count": 21,
+                    "state": "refined"
+                }
+            ]
+        }
+    ]
+
+};
