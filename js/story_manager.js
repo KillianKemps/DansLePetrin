@@ -35,6 +35,30 @@ function story_manager(){
     	var choice = document.createTextNode(story[window.ref].conseq_ref[conseq][1]);
     	button.appendChild(choice);
 
+        switch(story[window.ref].conseq_ref[conseq][2]){
+            case 'bar':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/bar.png");
+                button.appendChild(image); 
+            break;
+            case 'hopital':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/hospital-building.png");
+                button.appendChild(image); 
+            break;
+            case 'musee':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/musee.png");
+                button.appendChild(image); 
+            break;
+            case 'commissariat':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/police.png");
+                button.appendChild(image); 
+            break;
+
+        }
+
         Game.condition[conseq] = [];
         Game.condition[conseq][0] = story[window.ref].conseq_ref[conseq][2];
         Game.condition[conseq][1] = story[window.ref].conseq_ref[conseq][0];
