@@ -47,6 +47,7 @@ function storyNext(inputCondition){
             console.log(Game.condition[i][1]);
                 window.ref = Game.condition[i][1];
                 story_manager();
+                showHideInterface();
         }
     //}
     }
