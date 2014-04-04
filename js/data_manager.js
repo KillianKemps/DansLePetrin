@@ -70,7 +70,7 @@ for (var i = 0; i < musees.features.length; i++) {
         markerMusees[i] = new L.marker([musees.features[i].properties.wgs84[0],musees.features[i].properties.wgs84[1]], {icon: museeIcon})
             .bindPopup("<div class='info_lieu'>"+
                 "<h2>" + musees.features[i].properties.nom_du_musee + "</h2>"+
-                "<a onclick=\"moveMarkerMusees(" + i + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "<a onclick=\"moveMarker(" + i + ", 'musee' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
 }
@@ -79,7 +79,7 @@ for (var i = 0; i < commissariats.features.length; i++) {
         markerCommissariats[i] = new L.marker([commissariats.features[i].properties.coordinates[0],commissariats.features[i].properties.coordinates[1]], {icon: commissariatIcon})
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">Commissariat</h2>"+
-                "<a onclick=\"moveMarkerCommissariats(" + i + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "<a onclick=\"moveMarker(" + i + ", 'commissariat' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
 }
@@ -89,7 +89,7 @@ for (var i = 0; i < hopitaux.features.length; i++) {
         markerHopitaux[i] = new L.marker([hopitaux.features[i].geometry.coordinates[1], hopitaux.features[i].geometry.coordinates[0]], {icon: hospitalIcon})
             .bindPopup("<div class='info_lieu'>"+
                 "<h2>" + hopitaux.features[i].properties.raison_sociale + "</h2>"+
-                "<a onclick=\"moveMarkerHopitaux(" + i + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "<a onclick=\"moveMarker(" + i + ", 'hopital' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
 }
@@ -101,7 +101,7 @@ for (var i = 0; i < pub.elements.length; i++) {
         markerPub[i] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">Pub</h2>"+
-                "<a onclick=\"moveMarkerPub(" + i + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "<a onclick=\"moveMarker(" + i + ", 'bar' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
     }
