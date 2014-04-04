@@ -55,7 +55,7 @@ hero.on('drag', function(event){
 
 hero.on('dragend', function(event){
     map.setView(hero.getLatLng(), 13);
-})
+});
 
 function showHideInterface(){
     if (!Game.showHideInterface) {
@@ -75,3 +75,38 @@ function showHideInterface(){
     
     //console.log('Clicked');
 }
+
+//Set hero position to clicked marker
+for (var i = 0; i < markerMusees.length; i++) {
+    markerMusees[i].on('click', function(event) {
+        var position = this.getLatLng();
+        hero.setLatLng(position);
+        circle.setLatLng(position);
+        displayMarker();
+    });
+}
+for (var i = 0; i < markerCommissariats.length; i++) {
+    markerCommissariats[i].on('click', function(event) {
+        var position = this.getLatLng();
+        hero.setLatLng(position);
+        circle.setLatLng(position);
+        displayMarker();
+    });
+}
+for (var i = 0; i < markerHopitaux.length; i++) {
+    markerHopitaux[i].on('click', function(event) {
+        var position = this.getLatLng();
+        hero.setLatLng(position);
+        circle.setLatLng(position);
+        displayMarker();
+    });
+}
+for (var i = 0; i < markerPub.length; i++) {
+    markerPub[i].on('click', function(event) {
+        var position = this.getLatLng();
+        hero.setLatLng(position);
+        circle.setLatLng(position);
+        displayMarker();
+    });
+}
+
