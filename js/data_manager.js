@@ -39,7 +39,7 @@ var fastfoodIcon = L.icon({             //Unused
             popupAnchor: [0, -28]
 });
 var pubIcon = L.icon({
-            iconUrl: 'img/liquor.png',
+            iconUrl: 'img/bar.png',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
@@ -68,18 +68,18 @@ var museeIcon = L.icon({
 /** Alternative import of museums*/
 for (var i = 0; i < musees.features.length; i++) {
         markerMusees[i] = new L.marker([musees.features[i].properties.wgs84[0],musees.features[i].properties.wgs84[1]], {icon: museeIcon})
-            .bindPopup(musees.features[i].properties.nom_du_musee);
+            .bindPopup("<a onclick=\"moveMarkerMusees(" + i + ")\">" + musees.features[i].properties.nom_du_musee + "</a>");
 }
 
 for (var i = 0; i < commissariats.features.length; i++) {
         markerCommissariats[i] = new L.marker([commissariats.features[i].properties.coordinates[0],commissariats.features[i].properties.coordinates[1]], {icon: commissariatIcon})
-            .bindPopup("Commissariat");
+            .bindPopup("<a onclick=\"moveMarkerCommissariats(" + i + ")\">Commissariat</a>");
 }
 
 for (var i = 0; i < hopitaux.features.length; i++) {
 
         markerHopitaux[i] = new L.marker([hopitaux.features[i].geometry.coordinates[1], hopitaux.features[i].geometry.coordinates[0]], {icon: hospitalIcon})
-            .bindPopup(hopitaux.features[i].properties.raison_sociale);
+            .bindPopup("<a onclick=\"moveMarkerHopitaux(" + i + ")\">" + hopitaux.features[i].properties.raison_sociale + "</a>");
 }
 
 for (var i = 0; i < pub.elements.length; i++) {
@@ -87,7 +87,7 @@ for (var i = 0; i < pub.elements.length; i++) {
     if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
 
         markerPub[i] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
-            .bindPopup("Pub");
+            .bindPopup("<a onclick=\"moveMarkerPub(" + i + ")\">Pub</a>");
     }
             
 }
