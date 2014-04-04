@@ -3,18 +3,18 @@
 /* Creating custom markers and forms                             */
 
 //add marker
-var marker = L.marker([48.853, 2.3835], {title:'Musée Jesaispasquoi'}).addTo(map);
+/*var marker = L.marker([48.853, 2.3835], {title:'Musée Jesaispasquoi'}).addTo(map);*/
 //add popup on marker
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+/*marker.bindPopup("<b>Hello world!</b><br>I am a popup.");*/
 
 //add marker
-var marker2 = L.marker([48.852, 2.389], {
+/*var marker2 = L.marker([48.852, 2.389], {
     title:'Show interface'
  
-});
+});*/
 
 //add popup on marker
-marker2.bindPopup("I'm showing the interface ! ");
+/*marker2.bindPopup("I'm showing the interface ! ");*/
 
 var heroIcon = L.icon({
             iconUrl: 'img/digsby.png',
@@ -23,17 +23,18 @@ var heroIcon = L.icon({
             popupAnchor: [0, -28]
         });
 
-var hero = L.marker([48.83478, 2.3679], {title:'hero', icon:heroIcon, draggable: true, zIndexOffset: 1000}).addTo(map);
+var hero = L.marker([48.839, 2.327], {title:'hero', icon:heroIcon, draggable: true, zIndexOffset: 1000}).addTo(map);
+map.setView([48.839, 2.327], 14);
 
 function displayMarker(){
-    var distance = marker2.getLatLng().distanceTo(hero.getLatLng());
+    /*var distance = marker2.getLatLng().distanceTo(hero.getLatLng());
 
     marker2.addTo(map);
         if (distance > 700) {
 
         map.removeLayer(marker2);
 
-     }
+     }*/
 
     for (var i = 0; i < markerMusees.length; i++) {
         var distanceMusees = markerMusees[i].getLatLng().distanceTo(hero.getLatLng());

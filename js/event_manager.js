@@ -3,12 +3,12 @@
 /* Creating event when clicking on marker                        */
 
 //create function that reacts for marker event click
-function onMarkerClick(e) {
+/*function onMarkerClick(e) {
     alert("Hey, you clicked it right " + e.toGeoJSON);
 }
-
+*/
 //put trigger on marker that shows interface
-marker.on('click', onMarkerClick);
+/*marker.on('click', onMarkerClick);*/
 
 function onMarker2Click(e) {
     var interfaceBlock = document.getElementById('interfaceBlock');
@@ -25,12 +25,12 @@ function onClickclose() {
     interfaceBlock.style.display = "none";
 }
 
-function changeIcon(e) {
+/*function changeIcon(e) {
     console.log(e.getLatLng);
     marker.setIcon(fastfoodIcon);
-}
+}*/
 //put trigger on marker
-marker2.on('click', onMarker2Click);
+/*marker2.on('click', onMarker2Click);*/
 
 
 //on map, popup appears with coordinates
