@@ -2,7 +2,7 @@
 /* Generating map                                                */
 
 	// create a map in the "map" div, set the view to a given place and zoom
-	var map = L.map('map').setView([48.8567, 2.3508], 13);
+	var map = L.map('map').setView([48.83478, 2.3679], 13);
 
 	//set bounds so we can't look outside Paris
 	var southWest = new L.latLng([48.81, 2.22], map.getMaxZoom());
