@@ -100,7 +100,7 @@ function story_manager(){
 
 
 pubsLayer.on('click', function (){
-    console.log(Game.condition);
+    //console.log(Game.condition);
     
     for ( var i in Game.condition){
         console.log(Game.condition[i][1]);
