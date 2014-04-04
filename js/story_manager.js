@@ -19,9 +19,16 @@ function story_manager(){
     	var li = document.createElement('li');
     	document.getElementById('conseq_ref').appendChild(li);
     	var button = document.createElement('button');
-    	button.setAttribute('onclick', "function update(){ window.ref = \"" + story[window.ref].conseq_ref[conseq][0] + "\"; story_manager();} update()"); 
-    	button.setAttribute('data-conseq_ref',story[window.ref].conseq_ref[conseq][0]); 
-    	button.setAttribute('data-location',story[window.ref].conseq_ref[conseq][2]); 
+
+        if(story[window.ref].conseq_ref[conseq][2] === 'reset'){
+            button.setAttribute('onclick', "function update(){ window.ref = \"" + story[window.ref].conseq_ref[conseq][0] + "\"; story_manager();} update()");
+        }
+        else{
+            button.setAttribute('onclick', "showHideInterface();"); 
+            button.setAttribute('data-conseq_ref',story[window.ref].conseq_ref[conseq][0]); 
+            button.setAttribute('data-location',story[window.ref].conseq_ref[conseq][2]); 
+        }
+    	
     	li.appendChild(button);
 
     	/* Bind a choice to the li element */
