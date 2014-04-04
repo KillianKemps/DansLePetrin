@@ -79,91 +79,28 @@ function showHideInterface(){
 //Set hero position to clicked marker
 /*for (var i = 0; i < markerMusees.length; i++) {
     markerMusees[i].on('click', function(event) {*/
-function moveMarkerMusees(marker){
-        var position = markerMusees[marker].getLatLng();
+function moveMarker(marker, condition){
+        switch(condition){
+            case 'bar':
+                var position = markerPub[marker].getLatLng();
+            break;
+            case 'hopital':
+                var position = markerHopitaux[marker].getLatLng();
+            break;
+            case 'musee':
+                var position = markerMusees[marker].getLatLng();
+            break;
+            case 'commissariat':
+                var position = markerCommissariats[marker].getLatLng();
+            break;
+
+        }
+        
         hero.setLatLng(position);
         circle.setLatLng(position);
         polyline.addLatLng(position);
         map.closePopup();
         displayMarker();
         map.setView(position, 15);    
-        storyMusees();
-}
-
-    /*});*/
-/*    markerMusees[i].on('contextmenu', function(event){
-        this.bindPopup(popupMusees[i]);
-        console.log(popupMusees[i]);
-        this.openPopup();
-        this.unbindPopup();
-    });*/
-/*}*/
-/*for (var i = 0; i < markerCommissariats.length; i++) {
-    markerCommissariats[i].on('click', function(event) {*/
-function moveMarkerCommissariats(marker){
-        var position = markerCommissariats[marker].getLatLng();
-        hero.setLatLng(position);
-        circle.setLatLng(position);
-        polyline.addLatLng(position);
-        map.closePopup();
-        displayMarker();
-        map.setView(position, 15);
-        storyCommissariats();
-}
-
-    /*});*/
-/*    markerCommissariats[i].on('contextmenu', function(event){
-        this.bindPopup(popupCommissariats[i]);
-        console.log(popupCommissariats[i]);
-        this.openPopup();
-        this.unbindPopup();
-    });*/
-/*}*/
-function moveMarkerHopitaux(marker){
-    //for (var i = 0; i < markerHopitaux.length; i++) {
-    //markerHopitaux[i].on('click', function(event) {
-        var position = markerHopitaux[marker].getLatLng();
-        hero.setLatLng(position);
-        circle.setLatLng(position);
-        polyline.addLatLng(position);
-        map.closePopup();
-        displayMarker();
-        map.setView(position, 15);
-        storyHopitaux();
-   //});
-//});
-
-/*    markerHopitaux[i].on('contextmenu', function(event){
-        this.bindPopup(popupHopitaux[i]);
-        console.log(popupHopitaux);
-        this.openPopup();
-        this.unbindPopup();
-    });*/
-}
-
-function moveMarkerPub(marker){
-   // for (var i = 0; i < markerPub.length; i++) {
-    /*console.log("i2: " + i);*/
-/*        markerPub[i].on('contextmenu', function(event){
-        console.log(popupPub[240]);
-        console.log('i: ' + i);
-        this.bindPopup(popupPub[i]);
-        
-        this.openPopup();
-        this.unbindPopup();
-    });
-
-*/    //markerPub[i].on('click', function(event) {
-        var position = markerPub[marker].getLatLng();
-        hero.setLatLng(position);
-        circle.setLatLng(position);
-        polyline.addLatLng(position);
-        map.closePopup();
-        displayMarker();
-        map.setView(position, 15);
-        storyPub();
-    //});
-
-//}
-
+        storyNext(condition);
 }
