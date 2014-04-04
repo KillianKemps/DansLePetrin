@@ -99,9 +99,9 @@ function story_manager(){
 }
 
 
-pubsLayer.on('click', function (){
+//pubsLayer.on('click', function (){
     //console.log(Game.condition);
-    
+function storyPub(){
     for ( var i in Game.condition){
         console.log(Game.condition[i][1]);
         if(Game.condition[i][0] === "bar"){
@@ -109,32 +109,43 @@ pubsLayer.on('click', function (){
                 window.ref = Game.condition[i][1];
                 story_manager();
         }
-    }
-});
+    //}
+}    
+}    
+//});
 
-commissariatsLayer.on('click', function (){
+//commissariatsLayer.on('click', function (){
+function storyCommissariats(){
     for ( var i in Game.condition){
         if(Game.condition[i][0] === "commissariat"){
                 window.ref = Game.condition[i][1];
                 story_manager();
         }
-    }
-});
+    }    
+}
 
-museesLayer.on('click', function (){
+//});
+
+//museesLayer.on('click', function (){
+function storyMusees(){
     for ( var i in Game.condition){
         if(Game.condition[i][0] === "musee"){
                 window.ref = Game.condition[i][1];
                 story_manager();
         }
-    }
-});
+    }    
+}
 
-hopitauxLayer.on('click', function (){
+//});
+
+//hopitauxLayer.on('click', function (){
+function storyHopitaux(){
     for ( var i in Game.condition){
         if(Game.condition[i][0] === "hopital"){
                 window.ref = Game.condition[i][1];
                 story_manager();
         }
-    }
-});
+    }   
+}
+
+//});

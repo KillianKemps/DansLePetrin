@@ -84,8 +84,10 @@ function moveMarkerMusees(marker){
         hero.setLatLng(position);
         circle.setLatLng(position);
         polyline.addLatLng(position);
+        map.closePopup();
         displayMarker();
         map.setView(position, 15);    
+        storyMusees();
 }
 
     /*});*/
@@ -103,8 +105,10 @@ function moveMarkerCommissariats(marker){
         hero.setLatLng(position);
         circle.setLatLng(position);
         polyline.addLatLng(position);
+        map.closePopup();
         displayMarker();
         map.setView(position, 15);
+        storyCommissariats();
 }
 
     /*});*/
@@ -122,8 +126,10 @@ function moveMarkerHopitaux(marker){
         hero.setLatLng(position);
         circle.setLatLng(position);
         polyline.addLatLng(position);
+        map.closePopup();
         displayMarker();
         map.setView(position, 15);
+        storyHopitaux();
    //});
 //});
 
@@ -152,8 +158,10 @@ function moveMarkerPub(marker){
         hero.setLatLng(position);
         circle.setLatLng(position);
         polyline.addLatLng(position);
+        map.closePopup();
         displayMarker();
         map.setView(position, 15);
+        storyPub();
     //});
 
 //}
