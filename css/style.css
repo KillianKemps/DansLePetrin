@@ -26,9 +26,7 @@ border: solid black 1px;
 background-color: black; 
 display: none; */
 }
-#interfaceBlock ul{
-	padding-bottom: 50px;
-}
+
 #visitbutton {
 	position: absolute;
 	bottom: 0px;
@@ -58,6 +56,12 @@ display: none; */
 	dialogMenu
 ******************/
 
+#interfaceBlock ul{
+	padding-bottom: 50px;
+	padding-left: 100px;
+    padding-right: 20px;
+}
+
 .dialogMenu {	
 	z-index: 2;
 	/*background-color: rgba(255,255,255,0.9);*/
@@ -84,14 +88,15 @@ display: none; */
 	/* width: 115px; */
 	width: 500px;
 	margin: auto;
+	margin-left: 90px;
 	padding-top: 50px;
 }
 
 .dialogMenu p {	
 	width: 500px;
-	margin: auto;
-	margin-top: 47px;
-
+	/* margin: auto;
+	margin-top: 47px; */
+	margin: 47px auto auto 110px;
 	font-size: 0.750em;
 
 	text-align: center;
@@ -113,6 +118,16 @@ display: none; */
 
 .dialogMenu li{
 	list-style-type: none;
+}
+
+.dialogMenu button{
+    background: none repeat scroll 0 0 #353535;
+    border: medium none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
 }
 
 /** Info Lieu Popup **/
