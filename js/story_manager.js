@@ -40,6 +40,11 @@ function story_manager(){
 
         /* Puts an icon with the choice */
         switch(story[window.ref].conseq_ref[conseq][2]){
+            case 'moi':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/digsby.png");
+                button.appendChild(image); 
+            break;
             case 'bar':
                 var image = document.createElement('img');
                 image.setAttribute('src', "img/bar.png");
@@ -73,6 +78,11 @@ function story_manager(){
             case 'kiosque':
                 var image = document.createElement('img');
                 image.setAttribute('src', "img/kiosk.png");
+                button.appendChild(image); 
+            break;
+            case 'bijouterie':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/jewelry.png");
                 button.appendChild(image); 
             break;
 

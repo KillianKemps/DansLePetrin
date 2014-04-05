@@ -10,11 +10,13 @@ var pubsLayer = L.featureGroup();
 var mairiesLayer = L.featureGroup();
 var fleuristesLayer = L.featureGroup();
 var kiosquesLayer = L.featureGroup();
+var bijoutiersLayer = L.featureGroup();
 
 var baseMaps = {
 };
 
 var overlayMaps = {
+    "Bijoutiers" : bijoutiersLayer,
     "Commissariats": commissariatsLayer,
     "Fleuristes" : fleuristesLayer,
     "Hopitaux": hopitauxLayer,
@@ -32,6 +34,7 @@ var markerPub = [];
 var markerMairies = [];
 var markerFleuristes = [];
 var markerKiosques = [];
+var markerBijoutiers = [];
 
 
 museesLayer.addTo(map);
@@ -42,6 +45,7 @@ pubsLayer.addTo(map);
 mairiesLayer.addTo(map);
 fleuristesLayer.addTo(map);
 kiosquesLayer.addTo(map);
+bijoutiersLayer.addTo(map);
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
@@ -90,6 +94,12 @@ var fleuristeIcon = L.icon({
 });
 var kiosqueIcon = L.icon({
             iconUrl: 'img/kiosk.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+});
+var bijoutierIcon = L.icon({
+            iconUrl: 'img/jewelry.png',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
@@ -178,6 +188,23 @@ for (var i = 0; i < kiosques.features.length; i++) {
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">"+ "Kiosque" + "</h2>"+
                 "<a onclick=\"moveMarker(" + j + ", 'kiosque' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "</div>"
+                );
+            j++;
+        }
+        
+    }     
+}
+//To clean data, rearrange the array with a new variable j
+var j = 0;
+for (var i = 0; i < bijoutiers.features.length; i++) {
+
+    if(bijoutiers.features[i].geometry.coordinates){ //Protect if data corrumpted
+        if(bijoutiers.features[i].geometry.type == "Point"){
+            markerBijoutiers[j] = new L.marker([bijoutiers.features[i].geometry.coordinates[1], bijoutiers.features[i].geometry.coordinates[0]], {icon: bijoutierIcon})
+            .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">"+ "Bijoutier" + "</h2>"+
+                "<a onclick=\"moveMarker(" + j + ", 'bijoutier' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
             j++;
