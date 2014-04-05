@@ -16,8 +16,9 @@ var overlayMaps = {
     "Commissariats": commissariatsLayer,
     "Hopitaux": hopitauxLayer, 
     //"Hotels": hotelsLayer,
+    "Mairies": mairiesLayer,
     "Musees": museesLayer,
-    "Pub": pubsLayer
+    "Pubs": pubsLayer
 };
 
 var markerMusees = [];
