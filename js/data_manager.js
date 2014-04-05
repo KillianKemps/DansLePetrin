@@ -11,6 +11,7 @@ var mairiesLayer = L.featureGroup();
 var fleuristesLayer = L.featureGroup();
 var kiosquesLayer = L.featureGroup();
 var bijoutiersLayer = L.featureGroup();
+var supermarchesLayer = L.featureGroup();
 
 var baseMaps = {
 };
@@ -24,7 +25,8 @@ var overlayMaps = {
     //"Hotels": hotelsLayer,
     "Mairies": mairiesLayer,
     "Musees": museesLayer,
-    "Pubs": pubsLayer
+    "Pubs": pubsLayer,
+    "Supermarchés" : supermarchesLayer
 };
 
 var markerMusees = [];
@@ -35,6 +37,7 @@ var markerMairies = [];
 var markerFleuristes = [];
 var markerKiosques = [];
 var markerBijoutiers = [];
+var markerSupermarches = [];
 
 
 museesLayer.addTo(map);
@@ -46,6 +49,8 @@ mairiesLayer.addTo(map);
 fleuristesLayer.addTo(map);
 kiosquesLayer.addTo(map);
 bijoutiersLayer.addTo(map);
+supermarchesLayer.addTo(map);
+
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
@@ -100,6 +105,12 @@ var kiosqueIcon = L.icon({
 });
 var bijoutierIcon = L.icon({
             iconUrl: 'img/jewelry.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+});
+var supermarcheIcon = L.icon({
+            iconUrl: 'img/supermarket.png',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
@@ -205,6 +216,23 @@ for (var i = 0; i < bijoutiers.features.length; i++) {
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">"+ "Bijoutier" + "</h2>"+
                 "<a onclick=\"moveMarker(" + j + ", 'bijouterie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "</div>"
+                );
+            j++;
+        }
+        
+    }     
+}
+//To clean data, rearrange the array with a new variable j
+var j = 0;
+for (var i = 0; i < supermarches.features.length; i++) {
+
+    if(supermarches.features[i].geometry.coordinates){ //Protect if data corrumpted
+        if(supermarches.features[i].geometry.type == "Point"){
+            markerSupermarches[j] = new L.marker([supermarches.features[i].geometry.coordinates[1], supermarches.features[i].geometry.coordinates[0]], {icon: supermarcheIcon})
+            .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">"+ "Supermarche" + "</h2>"+
+                "<a onclick=\"moveMarker(" + j + ", 'supermarche' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
             j++;

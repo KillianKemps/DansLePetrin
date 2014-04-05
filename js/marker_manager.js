@@ -137,6 +137,18 @@ function displayMarker(){
                 markerBijoutiers[i].addTo(bijoutiersLayer);
             }
     }
+    for (var i = 0; i < markerSupermarches.length; i++) {
+        var distanceSupermarche = markerSupermarches[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceSupermarche > 700) {
+                //map.removeLayer(markerPub[i]);
+                supermarchesLayer.removeLayer(markerSupermarches[i]);
+            }
+            else{
+                //markerPub[i].addTo(map);
+                markerSupermarches[i].addTo(supermarchesLayer);
+            }
+    }
 }
  
 //Display data when site is opened    

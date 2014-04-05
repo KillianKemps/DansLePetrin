@@ -85,6 +85,11 @@ function story_manager(){
                 image.setAttribute('src', "img/jewelry.png");
                 button.appendChild(image); 
             break;
+            case 'supermarche':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/supermarket.png");
+                button.appendChild(image); 
+            break;
 
         }
 
