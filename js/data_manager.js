@@ -204,7 +204,7 @@ for (var i = 0; i < bijoutiers.features.length; i++) {
             markerBijoutiers[j] = new L.marker([bijoutiers.features[i].geometry.coordinates[1], bijoutiers.features[i].geometry.coordinates[0]], {icon: bijoutierIcon})
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">"+ "Bijoutier" + "</h2>"+
-                "<a onclick=\"moveMarker(" + j + ", 'bijoutier' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "<a onclick=\"moveMarker(" + j + ", 'bijouterie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
             j++;
