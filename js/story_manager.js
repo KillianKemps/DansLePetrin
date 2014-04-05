@@ -75,6 +75,11 @@ function story_manager(){
                 image.setAttribute('src', "img/kiosk.png");
                 button.appendChild(image); 
             break;
+            case 'bijoutier':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/jewelry.png");
+                button.appendChild(image); 
+            break;
 
         }
 

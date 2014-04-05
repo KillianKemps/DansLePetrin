@@ -105,6 +105,9 @@ function moveMarker(marker, condition){
             case 'kiosque':
                 var position = markerKiosques[marker].getLatLng();
             break;
+            case 'bijoutier':
+                var position = markerBijoutiers[marker].getLatLng();
+            break;
         }
         
         hero.setLatLng(position);

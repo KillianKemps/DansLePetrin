@@ -125,6 +125,18 @@ function displayMarker(){
                 markerKiosques[i].addTo(kiosquesLayer);
             }
     }
+    for (var i = 0; i < markerBijoutiers.length; i++) {
+        var distanceBijoutier = markerBijoutiers[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceBijoutier > 700) {
+                //map.removeLayer(markerPub[i]);
+                bijoutiersLayer.removeLayer(markerBijoutiers[i]);
+            }
+            else{
+                //markerPub[i].addTo(map);
+                markerBijoutiers[i].addTo(bijoutiersLayer);
+            }
+    }
 }
  
 //Display data when site is opened    
