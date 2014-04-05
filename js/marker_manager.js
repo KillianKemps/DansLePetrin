@@ -17,7 +17,7 @@
 /*marker2.bindPopup("I'm showing the interface ! ");*/
 
 var heroIcon = L.icon({
-            iconUrl: 'img/digsby.png',
+            iconUrl: 'img/icone-hero.png',
             iconSize: [32, 37],
             iconAnchor: [16, 25],
             popupAnchor: [0, -28]

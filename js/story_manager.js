@@ -42,7 +42,7 @@ function story_manager(){
         switch(story[window.ref].conseq_ref[conseq][2]){
             case 'moi':
                 var image = document.createElement('img');
-                image.setAttribute('src', "img/digsby.png");
+                image.setAttribute('src', "img/icone-hero.png");
                 button.appendChild(image); 
             break;
             case 'bar':
