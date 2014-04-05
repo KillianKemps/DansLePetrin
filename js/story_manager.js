@@ -70,6 +70,11 @@ function story_manager(){
                 image.setAttribute('src', "img/flowers.png");
                 button.appendChild(image); 
             break;
+            case 'kiosque':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/kiosk.png");
+                button.appendChild(image); 
+            break;
 
         }
 

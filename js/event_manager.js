@@ -101,6 +101,9 @@ function moveMarker(marker, condition){
             break;
             case 'fleuriste':
                 var position = markerFleuristes[marker].getLatLng();
+            break; 
+            case 'kiosque':
+                var position = markerKiosques[marker].getLatLng();
             break;
         }
         

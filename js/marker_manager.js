@@ -113,6 +113,18 @@ function displayMarker(){
                 markerFleuristes[i].addTo(fleuristesLayer);
             }
     }
+    for (var i = 0; i < markerKiosques.length; i++) {
+        var distanceKiosque = markerKiosques[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceKiosque > 700) {
+                //map.removeLayer(markerPub[i]);
+                kiosquesLayer.removeLayer(markerKiosques[i]);
+            }
+            else{
+                //markerPub[i].addTo(map);
+                markerKiosques[i].addTo(kiosquesLayer);
+            }
+    }
 }
  
 //Display data when site is opened    

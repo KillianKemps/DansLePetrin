@@ -9,6 +9,7 @@ var commissariatsLayer = L.featureGroup();
 var pubsLayer = L.featureGroup();
 var mairiesLayer = L.featureGroup();
 var fleuristesLayer = L.featureGroup();
+var kiosquesLayer = L.featureGroup();
 
 var baseMaps = {
 };
@@ -16,7 +17,8 @@ var baseMaps = {
 var overlayMaps = {
     "Commissariats": commissariatsLayer,
     "Fleuristes" : fleuristesLayer,
-    "Hopitaux": hopitauxLayer, 
+    "Hopitaux": hopitauxLayer,
+    "Kiosques" : kiosquesLayer, 
     //"Hotels": hotelsLayer,
     "Mairies": mairiesLayer,
     "Musees": museesLayer,
@@ -29,6 +31,7 @@ var markerHopitaux = [];
 var markerPub = [];
 var markerMairies = [];
 var markerFleuristes = [];
+var markerKiosques = [];
 
 
 museesLayer.addTo(map);
@@ -38,6 +41,7 @@ commissariatsLayer.addTo(map);
 pubsLayer.addTo(map);
 mairiesLayer.addTo(map);
 fleuristesLayer.addTo(map);
+kiosquesLayer.addTo(map);
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
@@ -80,6 +84,12 @@ var mairieIcon = L.icon({
 });
 var fleuristeIcon = L.icon({
             iconUrl: 'img/flowers.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+});
+var kiosqueIcon = L.icon({
+            iconUrl: 'img/kiosk.png',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
@@ -150,7 +160,24 @@ for (var i = 0; i < fleuristes.features.length; i++) {
             markerFleuristes[j] = new L.marker([fleuristes.features[i].geometry.coordinates[1], fleuristes.features[i].geometry.coordinates[0]], {icon: fleuristeIcon})
             .bindPopup("<div class='info_lieu'>"+
                 "<h2 style=\"text-align:center;\">"+ "Fleuriste" + "</h2>"+
-                "<a onclick=\"moveMarker(" + i + ", 'fleuriste' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "<a onclick=\"moveMarker(" + j + ", 'fleuriste' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "</div>"
+                );
+            j++;
+        }
+        
+    }     
+}
+//To clean data, rearrange the array with a new variable j
+var j = 0;
+for (var i = 0; i < kiosques.features.length; i++) {
+
+    if(kiosques.features[i].geometry.coordinates){ //Protect if data corrumpted
+        if(kiosques.features[i].geometry.type == "Point"){
+            markerKiosques[j] = new L.marker([kiosques.features[i].geometry.coordinates[1], kiosques.features[i].geometry.coordinates[0]], {icon: kiosqueIcon})
+            .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">"+ "Kiosque" + "</h2>"+
+                "<a onclick=\"moveMarker(" + j + ", 'kiosque' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
             j++;
