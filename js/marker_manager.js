@@ -100,7 +100,18 @@ function displayMarker(){
                 //markerPub[i].addTo(map);
                 markerMairies[i].addTo(mairiesLayer);
             }
-        
+    }
+    for (var i = 0; i < markerFleuristes.length; i++) {
+        var distanceFleuriste = markerFleuristes[i].getLatLng().distanceTo(hero.getLatLng());
+
+            if (distanceFleuriste > 700) {
+                //map.removeLayer(markerPub[i]);
+                fleuristesLayer.removeLayer(markerFleuristes[i]);
+            }
+            else{
+                //markerPub[i].addTo(map);
+                markerFleuristes[i].addTo(fleuristesLayer);
+            }
     }
 }
  

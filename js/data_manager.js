@@ -8,12 +8,14 @@ var commissariatsLayer = L.featureGroup();
 //var hotelsLayer = L.layerGroup();
 var pubsLayer = L.featureGroup();
 var mairiesLayer = L.featureGroup();
+var fleuristesLayer = L.featureGroup();
 
 var baseMaps = {
 };
 
 var overlayMaps = {
     "Commissariats": commissariatsLayer,
+    "Fleuristes" : fleuristesLayer,
     "Hopitaux": hopitauxLayer, 
     //"Hotels": hotelsLayer,
     "Mairies": mairiesLayer,
@@ -26,6 +28,7 @@ var markerCommissariats = [];
 var markerHopitaux = [];
 var markerPub = [];
 var markerMairies = [];
+var markerFleuristes = [];
 
 
 museesLayer.addTo(map);
@@ -34,6 +37,7 @@ commissariatsLayer.addTo(map);
 //hotelsLayer.addTo(map);
 pubsLayer.addTo(map);
 mairiesLayer.addTo(map);
+fleuristesLayer.addTo(map);
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
@@ -70,6 +74,12 @@ var museeIcon = L.icon({
 });
 var mairieIcon = L.icon({
             iconUrl: 'img/administration.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+});
+var fleuristeIcon = L.icon({
+            iconUrl: 'img/flowers.png',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
@@ -129,6 +139,22 @@ for (var i = 0; i < mairies.records.length; i++) {
                 "<a onclick=\"moveMarker(" + i + ", 'mairie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
-    }
-            
+    }     
+}
+//To clean data, rearrange the array with a new variable j
+var j = 0;
+for (var i = 0; i < fleuristes.features.length; i++) {
+
+    if(fleuristes.features[i].geometry.coordinates){ //Protect if data corrumpted
+        if(fleuristes.features[i].geometry.type == "Point"){
+            markerFleuristes[j] = new L.marker([fleuristes.features[i].geometry.coordinates[1], fleuristes.features[i].geometry.coordinates[0]], {icon: fleuristeIcon})
+            .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">"+ "Fleuriste" + "</h2>"+
+                "<a onclick=\"moveMarker(" + i + ", 'fleuriste' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                "</div>"
+                );
+            j++;
+        }
+        
+    }     
 }

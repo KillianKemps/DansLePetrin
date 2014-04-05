@@ -65,6 +65,11 @@ function story_manager(){
                 image.setAttribute('src', "img/administration.png");
                 button.appendChild(image); 
             break;
+            case 'fleuriste':
+                var image = document.createElement('img');
+                image.setAttribute('src', "img/flowers.png");
+                button.appendChild(image); 
+            break;
 
         }
 
