@@ -118,4 +118,5 @@ var circle = L.circle(hero.getLatLng(), 700, {
     fillOpacity: 0,
 }).addTo(map);
 
+/* Generate a path that will be completed with visited locations */
 var polyline = L.polyline([]).addTo(map);

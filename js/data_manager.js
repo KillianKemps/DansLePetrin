@@ -76,7 +76,7 @@ var mairieIcon = L.icon({
 });
 
 
-/** Alternative import of museums*/
+/** Import of each data in an array. Binding a popup with informations concerning the data*/
 for (var i = 0; i < musees.features.length; i++) {
         markerMusees[i] = new L.marker([musees.features[i].properties.wgs84[0],musees.features[i].properties.wgs84[1]], {icon: museeIcon})
             .bindPopup("<div class='info_lieu'>"+

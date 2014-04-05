@@ -3,6 +3,8 @@
 
 window.ref = "A001"; //Init first step
 
+
+/** Imports the actual story step and put it into the dialog menu **/
 function story_manager(){
     var interfaceBlock = document.getElementById('interfaceBlock');
     interfaceBlock.style.display = "block";
@@ -20,6 +22,7 @@ function story_manager(){
     	document.getElementById('conseq_ref').appendChild(li);
     	var button = document.createElement('button');
 
+        /* If the condition is reset, then allow the button to be enabled and to restart */
         if(story[window.ref].conseq_ref[conseq][2] === 'reset'){
             button.setAttribute('onclick', "function update(){ window.ref = \"" + story[window.ref].conseq_ref[conseq][0] + "\"; story_manager();} update()");
         }
@@ -35,6 +38,7 @@ function story_manager(){
     	var choice = document.createTextNode(story[window.ref].conseq_ref[conseq][1]);
     	button.appendChild(choice);
 
+        /* Puts an icon with the choice */
         switch(story[window.ref].conseq_ref[conseq][2]){
             case 'bar':
                 var image = document.createElement('img');
@@ -64,6 +68,7 @@ function story_manager(){
 
         }
 
+        /* Loads the story consequences in an array to be checked by storyNext() */
         Game.condition[conseq] = [];
         Game.condition[conseq][0] = story[window.ref].conseq_ref[conseq][2];
         Game.condition[conseq][1] = story[window.ref].conseq_ref[conseq][0];
@@ -72,10 +77,8 @@ function story_manager(){
 }
 
 
-//pubsLayer.on('click', function (){
-    //console.log(Game.condition);
-    //
-    //
+
+/** Checks if the events makes the story advance **/
 function storyNext(inputCondition){
     for ( var i in Game.condition){
         console.log(Game.condition[i][1]);
@@ -85,6 +88,5 @@ function storyNext(inputCondition){
                 story_manager();
                 showHideInterface();
         }
-    //}
     }
 }

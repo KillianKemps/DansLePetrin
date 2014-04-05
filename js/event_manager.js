@@ -76,13 +76,12 @@ function showHideInterface(){
     //console.log('Clicked');
 }
 
-//Set hero position to clicked marker
-/*for (var i = 0; i < markerMusees.length; i++) {
-    markerMusees[i].on('click', function(event) {*/
+/** Send to check story if hero is clicked on **/
 hero.on('click', function(event){
     storyNext('moi');
 })
 
+/**  Moves the hero and send to storyNext to check the story **/
 function moveMarker(marker, condition){
         switch(condition){
             case 'bar':
