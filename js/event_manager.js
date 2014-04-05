@@ -105,7 +105,7 @@ function moveMarker(marker, condition){
             case 'kiosque':
                 var position = markerKiosques[marker].getLatLng();
             break;
-            case 'bijoutier':
+            case 'bijouterie':
                 var position = markerBijoutiers[marker].getLatLng();
             break;
         }
