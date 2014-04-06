@@ -241,15 +241,26 @@ for (var i = 0; i < bijoutiers.features.length; i++) {
 
     if(bijoutiers.features[i].geometry.coordinates){ //Protect if data corrumpted
         if(bijoutiers.features[i].geometry.type == "Point"){
-            markerBijoutiers[j] = new L.marker([bijoutiers.features[i].geometry.coordinates[1], bijoutiers.features[i].geometry.coordinates[0]], {icon: bijoutierIcon})
-            .bindPopup("<div class='info_lieu'>"+
-                "<h2 style=\"text-align:center;\">"+ "Bijoutier" + "</h2>"+
-                "<a onclick=\"moveMarker(" + j + ", 'bijouterie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
-                "</div>"
-                );
-            j++;
+            if('name' in fleuristes.features[i].properties){
+                markerBijoutiers[j] = new L.marker([bijoutiers.features[i].geometry.coordinates[1], bijoutiers.features[i].geometry.coordinates[0]], {icon: bijoutierIcon})
+                    .bindPopup("<div class='info_lieu'>"+
+                        "<h2 style=\"text-align:center;\">"+ bijoutiers.features[i].properties.name + "</h2>"+
+                        "<a onclick=\"moveMarker(" + j + ", 'bijouterie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                        "</div>"
+                        );
+                    j++;
+            }
+            
+            else{
+                markerBijoutiers[j] = new L.marker([bijoutiers.features[i].geometry.coordinates[1], bijoutiers.features[i].geometry.coordinates[0]], {icon: bijoutierIcon})
+                    .bindPopup("<div class='info_lieu'>"+
+                        "<h2 style=\"text-align:center;\">"+ "Bijoutier" + "</h2>"+
+                        "<a onclick=\"moveMarker(" + j + ", 'bijouterie' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                        "</div>"
+                        );
+                    j++;
+            }   
         }
-        
     }     
 }
 //To clean data, rearrange the array with a new variable j
@@ -258,13 +269,25 @@ for (var i = 0; i < supermarches.features.length; i++) {
 
     if(supermarches.features[i].geometry.coordinates){ //Protect if data corrumpted
         if(supermarches.features[i].geometry.type == "Point"){
-            markerSupermarches[j] = new L.marker([supermarches.features[i].geometry.coordinates[1], supermarches.features[i].geometry.coordinates[0]], {icon: supermarcheIcon})
-            .bindPopup("<div class='info_lieu'>"+
-                "<h2 style=\"text-align:center;\">"+ "Supermarche" + "</h2>"+
-                "<a onclick=\"moveMarker(" + j + ", 'supermarche' " + ")\"><img src=\"img/localisation.png\"/></a>" +
-                "</div>"
-                );
-            j++;
+            if('name' in supermarches.features[i].properties){
+                markerSupermarches[j] = new L.marker([supermarches.features[i].geometry.coordinates[1], supermarches.features[i].geometry.coordinates[0]], {icon: supermarcheIcon})
+                .bindPopup("<div class='info_lieu'>"+
+                    "<h2 style=\"text-align:center;\">"+ supermarches.features[i].properties.name + "</h2>"+
+                    "<a onclick=\"moveMarker(" + j + ", 'supermarche' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                    "</div>"
+                    );
+                j++; 
+            }
+            else{
+               markerSupermarches[j] = new L.marker([supermarches.features[i].geometry.coordinates[1], supermarches.features[i].geometry.coordinates[0]], {icon: supermarcheIcon})
+                .bindPopup("<div class='info_lieu'>"+
+                    "<h2 style=\"text-align:center;\">"+ "Supermarche" + "</h2>"+
+                    "<a onclick=\"moveMarker(" + j + ", 'supermarche' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                    "</div>"
+                    );
+                j++; 
+            }
+            
         }
         
     }     
