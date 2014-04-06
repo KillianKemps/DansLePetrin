@@ -306,9 +306,9 @@ var story = {
     "description": " CA Y EST !!! CA Y EST !!! ELLE BOUGE !!! ELLE SOUFFRE !!! ENFIN ! UN DERNIER COUP ET ELLE VA EXPLOSER !!!!",
     "conseq_ref": [
       [
-        "A016",
-        "Un certain mal de tête se fait ressentir, et l'once de conscience qu'il vous reste vous fait réaliser qu'il serait temps de penser à respirer. Vous considérez malin de vous diriger vers un hôpital au plus vite.",
-        "hopital"
+        "A014",
+        "Un certain mal de tête se fait ressentir, et l'once de conscience qu'il vous reste vous fait réaliser qu'il serait temps de penser à respirer. Vous sortez précipitemment, sous l'effet d'une crise de panique et entrez en vitesse dans un musée, qui semblait être un endroit sur pour vous. ",
+        "musee"
       ],
       [
         "A999",
