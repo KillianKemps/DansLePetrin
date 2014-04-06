@@ -146,33 +146,19 @@ for (var i = 0; i < hopitaux.features.length; i++) {
                 );
 }
 
-var j = 0;
+
 for (var i = 0; i < pub.elements.length; i++) {
 
     if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
-        
-        if(pub.elements[i].hasOwnProperty('tags')){
-            if(pub.elements[i].tags.hasOwnProperty('name')) {
-                markerPub[j] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
-                    .bindPopup("<div class='info_lieu'>"+
-                "<h2 style=\"text-align:center;\">"+ pub.elements[i].tags.name + "</h2>"+       
-                "<a onclick=\"moveMarker(" + j + ", 'pub' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+
+        markerPub[i] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
+            .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">Pub</h2>"+
+                "<a onclick=\"moveMarker(" + i + ", 'bar' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
-                j++;
-            }    
-        }
-            
-        else {
-            markerPub[j] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
-                .bindPopup("<div class='info_lieu'>" +
-            "<h2 style=\"text-align:center;\">"+ "Pub" + "</h2>"+       
-            "<a onclick=\"moveMarker(" + j + ", 'pub' " + ")\"><img src=\"img/localisation.png\"/></a>" +
-            "</div>"
-            );
-            j++;
-        }
     }
+            
 }
 
 for (var i = 0; i < mairies.records.length; i++) {
@@ -194,7 +180,7 @@ for (var i = 0; i < fleuristes.features.length; i++) {
     if(fleuristes.features[i].geometry.coordinates){ //Protect if data corrumpted
         if(fleuristes.features[i].geometry.type == "Point"){
            // console.log(fleuristes.features[i]);
-            if('name' in fleuristes.features[i].properties){
+            if(fleuristes.features[i].properties.hasOwnProperty('name')){
                 markerFleuristes[j] = new L.marker([fleuristes.features[i].geometry.coordinates[1], fleuristes.features[i].geometry.coordinates[0]], {icon: fleuristeIcon})
                 .bindPopup("<div class='info_lieu'>"+
                     "<h2 style=\"text-align:center;\">"+ fleuristes.features[i].properties.name + "</h2>"+
@@ -212,10 +198,7 @@ for (var i = 0; i < fleuristes.features.length; i++) {
                     );    
                     j++;
                 }
-
-            
         }
-        
     }     
 }
 //To clean data, rearrange the array with a new variable j
@@ -224,7 +207,7 @@ for (var i = 0; i < kiosques.features.length; i++) {
 
     if(kiosques.features[i].geometry.coordinates){ //Protect if data corrumpted
         if(kiosques.features[i].geometry.type == "Point"){
-            if('name' in kiosques.features[i].properties){
+            if(kiosques.features[i].properties.hasOwnProperty('name')){
                 markerKiosques[j] = new L.marker([kiosques.features[i].geometry.coordinates[1], kiosques.features[i].geometry.coordinates[0]], {icon: kiosqueIcon})
                 .bindPopup("<div class='info_lieu'>"+
                     "<h2 style=\"text-align:center;\">"+ kiosques.features[i].properties.name + "</h2>"+
