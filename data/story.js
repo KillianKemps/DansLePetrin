@@ -80,25 +80,25 @@ var story = {
       ],
       [
         "A009",
-        "N’ayant pas trop envie de encore vous retrouvez sous le bureau de votre patron, vous vous résignez a passer à la mairie",
+        "N’ayant pas trop envie de encore vous retrouvez sous le bureau de votre patron pour garder votre emploi, vous vous résignez a passer à la mairie.",
         "mairie"
       ]
     ]
   },
   "A007": {
     "title": "It’s over 9000 !",
-    "description": "Après\n avoir lu l’intégralité des dragon ball Z, vous reprenez conscience de \nvotre environnement, et croisez avec stupeur le regard de votre petite \namie, qui vous attend devant le kiosque. Elle vous fait comprendre qu’il\n est temps de retourner aller faire du shopping….",
+    "description": "Après avoir lu l’intégralité des dragon ball Z, vous reprenez conscience de votre environnement, et croisez avec stupeur le regard de votre petite amie, qui vous attend devant le kiosque. Elle vous fait comprendre qu’il est temps de retourner aller faire du shopping….",
     "conseq_ref": [
       [
         "A001",
         "Vous posez gentillement votre manga, et suivez votre petite amie…",
-        "moi"
+        "reset"
       ]
     ]
   },
   "A008": {
     "title": "F.R.I.E.N.D.S",
-    "description": "Alors que vous vous dirigez vers la bijouterie, vous croisez vos amis, qui se dirigent vers un bar. Ils vous proposent de les accompagner.\n",
+    "description": "Alors que vous vous dirigez vers la bijouterie, vous croisez vos amis, qui se dirigent vers un bar. Ils vous proposent de les accompagner.",
     "conseq_ref": [
       [
         "A010",
@@ -114,7 +114,7 @@ var story = {
   },
   "A009": {
     "title": "Théorie de l'évolution",
-    "description": "Une fois à la mairie, vous croisez votre collègue Jean-Patrick. Celui ci est encore en train de travailler un dimanche...",
+    "description": "Une fois à la mairie, vous croisez votre collègue Jean-Patrick. Celui ci est encore en train de travailler un dimanche. Une idée vous croise la tête…",
     "conseq_ref": [
       [
         "A012",
@@ -150,7 +150,7 @@ var story = {
     "conseq_ref": [
       [
         "A017",
-        " Vous tentez d’utiliser vos hypothétiques pouvoirs psychiques pour faire exploser l’horloge, pour lui régler son compte. Elle l’a cherché.\n",
+        " Vous tentez d’utiliser vos hypothétiques pouvoirs psychiques pour faire exploser l’horloge, pour lui régler son compte. Elle l’a cherché.",
         "moi"
       ],
       [
@@ -165,7 +165,7 @@ var story = {
     "description": "Tout le monde sait que demander à quelqu’un d’effectuer une tâche un dimanche relève de la pure folie ; vous tombez donc sous le coup d’une flemmite aigüe, ce qui entraîne une rupture de la motivation et vous trouvez dans l’incapacité la plus totale d’être productif.",
     "conseq_ref": [
       [
-        "A015",
+        "A016",
         "Vous vous rendez à l'hôpital pour vous faire soigner.",
         "hopital"
       ],
@@ -176,18 +176,67 @@ var story = {
       ]
     ]
   },
+  "A014": {
+    "title": "Au musée",
+    "description": "Vous voila à présent au musée. En entrant, la porte derrière vous semble se fermer à clef. Étrange… Vous ne voyez personne dans les alentours, aucune sortie… Vous êtes enfermé.\nAu vu des évènements récents, vous vous dites que rester un peu de temps ici au calme pourrait s’avérer sage. Il s’avère justement qu’une conférence sur la langouste va bientôt démarrer. ",
+    "conseq_ref": [
+      [
+        "A030",
+        "Vous prenez sur vous, et faites ce pas décisif vers la salle. Tel un héros, vous vous dirigez vers cette conférence, où vous risquerez fortement de perdre la vie, ou au moins beaucoup de temps. Mais il faut le faire. Pour votre petite amie. Pour vous. Pour tout ce que vous avez enduré jusque là.\n",
+        "moi"
+      ],
+      [
+        "A999",
+        "Après tout ce que vous avez enduré, votre esprit affaibli ne supporte pas une telle nouvelle ; vous vous mettez a errer dans les couloirs en criant sur des statues et en insultant des momies. Vous décidez alors de devenir un indien, enlevez vos vêtements, enfilez un pagne et rentrez dans un tipi. Un policier vous ordonne de sortir, mais vous préférez tout de même le charger avec votre cheval en bois, et tenter de l’assomer avec un gourdin. \nLe policier sort alors son arme, mais vous comptez sur la force de vos super pouvoirs, des grands dieux indoux et surtout beaucoup de chance pour que la balle ne vous atteigne pas.\n",
+        "reset"
+      ]
+    ]
+  },
   "A017": {
     "title": "La déception",
     "description": "Vos pouvoirs psychiques n’ont malheureusement pas eu d’emprise sur l’horloge, ni même sur le cours du temps.",
     "conseq_ref": [
       [
-        "A018",
-        "Vous vous résignez à retourner accomplir votre tâche, et vous vous dirigez vers un supermarché, histoire de trainer dans les rayons et essayer de trouver un paquet de gâteaux.",
-        "supermarche"
+        "A014",
+        "Abattu par le non-fonctionnement de vos super pouvoirs, vous décidez de vous rendre dans un musee pour trainer, hagard et plongé dans la désillusion.",
+        "musee"
       ],
       [
         "A200",
         "Vous ne vous dégonflez pas, et décidez de lui montrer, à cette horloge, l’étendue réelle de vos pouvoirs déchainés !",
+        "moi"
+      ]
+    ]
+  },
+  "A030": {
+    "title": "La langouste.",
+    "description": "\"Mais vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise langouste. Moi si je devais résumer ma vie, aujourd’hui avec vous, je dirais que c’est d´abord des langoustes, des langoustes qui m’ont tendu la main peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les langoustes, les langoustes forgent une destinée. Parce que quand on a le goût de la langouste, quand on a le goût de la langouste bien faite, la belle langouste, parfois on ne trouve pas la langouste en face, je dirais la langouste qui vous aide à avancer. Alors ce n’est pas mon cas, comme je disais là, puique moi au contraire j’ai pu, et je dis merci à la langouste, je lui dis merci, je chante la langouste, je danse la langouste, je ne suis que langouste. Et finalement quand beaucoup de langoustes me disent aujourd’hui \"Mais comment fais-tu pour avoir cette langouste ? \" et bien je leur réponds très simplement, je leur dit : \"C’est ce goût de la langouste\", ce goût donc, qui m’a poussé aujourd’hui à entreprendre une construction de langouste, mais demain qui sait ? Peut-être simplement à me mettre au service de la langouste, à faire le don, le don de la langouste.\n\n",
+    "conseq_ref": [
+      [
+        "A031",
+        "D'accord, très bien.",
+        "moi"
+      ]
+    ]
+  },
+  "A031": {
+    "title": "Libération.",
+    "description": "C'est avec un cerveau détruit, un esprit en miette et une conscience souillée que vous sortez du musée. Vous êtes pourtant sur la dèrnière ligne droite. Vous le savez. Il vous faut faire un dernier effort.",
+    "conseq_ref": [
+      [
+        "A032",
+        "Vous vous rendez à la bijouterie.",
+        "moi"
+      ]
+    ]
+  },
+  "A032": {
+    "title": "Révélations.",
+    "description": "Vous posez enfin, ému, un pas dans la bijouterie. La femme derrière la caisse vous interpelle alors ; il s'agit d'une de vos camarade de classe du lycée. Bien que content de la voir, vous souhaitez surtout acheter une f**** bague et partir.\nCelle-ci vous fait d'ailleurs remarquer qu'acheter un bijou pour votre petite amie une veille de votre propre anniversaire est trop mignon. \nLe mot \"propre\" employé dans ce contexte vous marque. Vous demandez alors à votre amie caissière de s'expliquer. Elle vous annonce que vu que vous",
+    "conseq_ref": [
+      [
+        "A033",
+        "Vous vous rendez à la bijouterie.",
         "moi"
       ]
     ]
@@ -205,7 +254,7 @@ var story = {
   },
   "A201": {
     "title": "Mal de crâne 2",
-    "description": "Cette fois c’est sur ! Vous l’avez VU ! Vous l’avez senti ! Elle a bougé, elle a ressenti votre immense et redoutable pouvoir ! Il vous FAUT continuer, pour votre vengeance envers cette horloge !\n",
+    "description": "Cette fois c’est sur ! Vous l’avez VU ! Vous l’avez senti ! Elle a bougé, elle a ressenti votre immense et redoutable pouvoir ! Il vous FAUT continuer, pour votre vengeance envers cette horloge !",
     "conseq_ref": [
       [
         "A202",
@@ -227,7 +276,7 @@ var story = {
   },
   "A203": {
     "title": "Mal de crâne 4",
-    "description": " CA Y EST !!! CA Y EST !!! ELLE BOUGE ! UN DERNIER COUP ET ELLE VA EXPLOSER !!!!",
+    "description": " CA Y EST !!! CA Y EST !!! ELLE BOUGE !!! ELLE SOUFFRE !!! ENFIN ! UN DERNIER COUP ET ELLE VA EXPLOSER !!!!",
     "conseq_ref": [
       [
         "A016",
@@ -248,7 +297,7 @@ var story = {
       [
         "A001",
         "Recommencer",
-        "moi"
+        "reset"
       ]
     ]
   }
