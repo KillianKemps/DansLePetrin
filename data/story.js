@@ -210,7 +210,7 @@ var story = {
   },
   "A030": {
     "title": "La langouste.",
-    "description": "\"Mais vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise langouste. Moi si je devais résumer ma vie, aujourd’hui avec vous, je dirais que c’est d´abord des langoustes, des langoustes qui m’ont tendu la main peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les langoustes, les langoustes forgent une destinée. Parce que quand on a le goût de la langouste, quand on a le goût de la langouste bien faite, la belle langouste, parfois on ne trouve pas la langouste en face, je dirais la langouste qui vous aide à avancer. Alors ce n’est pas mon cas, comme je disais là, puique moi au contraire j’ai pu, et je dis merci à la langouste, je lui dis merci, je chante la langouste, je danse la langouste, je ne suis que langouste. Et finalement quand beaucoup de langoustes me disent aujourd’hui \"Mais comment fais-tu pour avoir cette langouste ? \" et bien je leur réponds très simplement, je leur dit : \"C’est ce goût de la langouste\", ce goût donc, qui m’a poussé aujourd’hui à entreprendre une construction de langouste, mais demain qui sait ? Peut-être simplement à me mettre au service de la langouste, à faire le don, le don de la langouste.\n\n",
+    "description": "\"Mais vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise langouste. Moi si je devais résumer ma vie, aujourd’hui avec vous, je dirais que c’est d´abord des langoustes, des langoustes qui m’ont tendu la main peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les langoustes, les langoustes forgent une destinée. Parce que quand on a le goût de la langouste, quand on a le goût de la langouste bien faite, la belle langouste, parfois on ne trouve pas la langouste en face, je dirais la langouste qui vous aide à avancer. Alors ce n’est pas mon cas, comme je disais là, puique moi au contraire j’ai pu, et je dis merci à la langouste, je lui dis merci, je chante la langouste, je danse la langouste, je ne suis que langouste. Et finalement quand beaucoup de langoustes me disent aujourd’hui \"Mais comment fais-tu pour avoir cette langouste ? \" et bien je leur réponds très simplement, je leur dit : \"C’est ce goût de la langouste\", ce goût donc, qui m’a poussé aujourd’hui à entreprendre une construction de langouste, mais demain qui sait ? Peut-être simplement à me mettre au service de la langouste, à faire le don, le don de la langouste.\"\n\n",
     "conseq_ref": [
       [
         "A031",
@@ -232,12 +232,39 @@ var story = {
   },
   "A032": {
     "title": "Révélations.",
-    "description": "Vous posez enfin, ému, un pas dans la bijouterie. La femme derrière la caisse vous interpelle alors ; il s'agit d'une de vos camarade de classe du lycée. Bien que content de la voir, vous souhaitez surtout acheter une f**** bague et partir.\nCelle-ci vous fait d'ailleurs remarquer qu'acheter un bijou pour votre petite amie une veille de votre propre anniversaire est trop mignon. \nLe mot \"propre\" employé dans ce contexte vous marque. Vous demandez alors à votre amie caissière de s'expliquer. Elle vous annonce que vu que vous",
+    "description": "Vous posez enfin, ému, un pas dans la bijouterie. La femme derrière la caisse vous interpelle alors ; il s'agit d'une de vos camarade de classe du lycée. Bien que content de la voir, vous souhaitez surtout acheter une f**** bague et partir.\nCelle-ci vous fait d'ailleurs remarquer qu'acheter un bijou pour votre petite amie une veille de votre propre anniversaire est trop mignon. \nLe mot \"propre\" employé dans ce contexte vous marque. Vous demandez alors à votre amie caissière de s'expliquer. \n\"Mais oui enfin ! C'est ton anniversaire demain ! Ne me dis pas que tu avais oublié ?!\"",
     "conseq_ref": [
       [
         "A033",
-        "Vous vous rendez à la bijouterie.",
+        "Prendre conscience que vous êtes très, très bête.",
         "moi"
+      ]
+    ]
+  },
+  "A033": {
+    "title": "Dans le pétrin.",
+    "description": "C'est au final votre propre anniversaire demain. Une journée calme et paisible, synonyme de détente et relaxation. Vous avez cependant passé la journée la plus longue de votre vie, la plus pénible.\n A l'annonce de cette nouvelle, les derniers neuronnes présents dans votre tête disparaissent dans un néan infini.",
+    "conseq_ref": [
+      [
+        "A999",
+        "Vous pendre.",
+        "reset"
+      ],
+      [
+        "A034",
+        "Rester planté la, jusqu'a ce que le sable, la poussière et le temps emporte votre misérable dépouille",
+        "moi"
+      ]
+    ]
+  },
+  "A034": {
+    "title": "Fin ! ",
+    "description": "Merci d'avoir joué à Dans le pétrin ! ",
+    "conseq_ref": [
+      [
+        "A001",
+        "N'hésitez pas à réessayer avec de nouveaux scénarios !",
+        "reset"
       ]
     ]
   },
