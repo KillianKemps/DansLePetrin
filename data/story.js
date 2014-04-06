@@ -226,7 +226,7 @@ var story = {
       [
         "A032",
         "Vous vous rendez à la bijouterie.",
-        "moi"
+        "bijouterie"
       ]
     ]
   },
