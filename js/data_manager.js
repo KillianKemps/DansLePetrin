@@ -146,18 +146,33 @@ for (var i = 0; i < hopitaux.features.length; i++) {
                 );
 }
 
+var j = 0;
 for (var i = 0; i < pub.elements.length; i++) {
 
     if(pub.elements[i].lat && pub.elements[i].lon){ //Protect if data corrumpted
-
-        markerPub[i] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
-            .bindPopup("<div class='info_lieu'>"+
-                "<h2 style=\"text-align:center;\">Pub</h2>"+
-                "<a onclick=\"moveMarker(" + i + ", 'bar' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+        
+        if(pub.elements[i].hasOwnProperty('tags')){
+            if(pub.elements[i].tags.hasOwnProperty('name')) {
+                markerPub[j] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
+                    .bindPopup("<div class='info_lieu'>"+
+                "<h2 style=\"text-align:center;\">"+ pub.elements[i].tags.name + "</h2>"+       
+                "<a onclick=\"moveMarker(" + j + ", 'pub' " + ")\"><img src=\"img/localisation.png\"/></a>" +
                 "</div>"
                 );
-    }
+                j++;
+            }    
+        }
             
+        else {
+            markerPub[j] = new L.marker([pub.elements[i].lat, pub.elements[i].lon], {icon: pubIcon})
+                .bindPopup("<div class='info_lieu'>" +
+            "<h2 style=\"text-align:center;\">"+ "Pub" + "</h2>"+       
+            "<a onclick=\"moveMarker(" + j + ", 'pub' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+            "</div>"
+            );
+            j++;
+        }
+    }
 }
 
 for (var i = 0; i < mairies.records.length; i++) {
@@ -178,13 +193,27 @@ for (var i = 0; i < fleuristes.features.length; i++) {
 
     if(fleuristes.features[i].geometry.coordinates){ //Protect if data corrumpted
         if(fleuristes.features[i].geometry.type == "Point"){
-            markerFleuristes[j] = new L.marker([fleuristes.features[i].geometry.coordinates[1], fleuristes.features[i].geometry.coordinates[0]], {icon: fleuristeIcon})
-            .bindPopup("<div class='info_lieu'>"+
-                "<h2 style=\"text-align:center;\">"+ "Fleuriste" + "</h2>"+
-                "<a onclick=\"moveMarker(" + j + ", 'fleuriste' " + ")\"><img src=\"img/localisation.png\"/></a>" +
-                "</div>"
-                );
-            j++;
+           // console.log(fleuristes.features[i]);
+            if('name' in fleuristes.features[i].properties){
+                markerFleuristes[j] = new L.marker([fleuristes.features[i].geometry.coordinates[1], fleuristes.features[i].geometry.coordinates[0]], {icon: fleuristeIcon})
+                .bindPopup("<div class='info_lieu'>"+
+                    "<h2 style=\"text-align:center;\">"+ fleuristes.features[i].properties.name + "</h2>"+
+                    "<a onclick=\"moveMarker(" + j + ", 'fleuriste' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                    "</div>"
+                    );
+                j++;
+            }
+            else{
+                markerFleuristes[j] = new L.marker([fleuristes.features[i].geometry.coordinates[1], fleuristes.features[i].geometry.coordinates[0]], {icon: fleuristeIcon})
+                .bindPopup("<div class='info_lieu'>"+
+                    "<h2 style=\"text-align:center;\">"+ "Fleuriste" + "</h2>"+
+                    "<a onclick=\"moveMarker(" + j + ", 'fleuriste' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                    "</div>"
+                    );    
+                    j++;
+                }
+
+            
         }
         
     }     
