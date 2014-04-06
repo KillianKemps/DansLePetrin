@@ -67,7 +67,10 @@ function showHideInterface(){
         //console.log('boolean: ' + Game.showHideInterface);
     }
     else{
-        $('#interfaceBlock').css('margin', '160px auto 0');
+      
+        $('#interfaceBlock').animate({
+            marginLeft: '359px'
+        }, 500);
         Game.showHideInterface = 0;
         document.getElementById('slideButton').innerHTML = "<";
         //console.log('boolean: ' + Game.showHideInterface);
