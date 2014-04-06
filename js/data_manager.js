@@ -224,15 +224,25 @@ for (var i = 0; i < kiosques.features.length; i++) {
 
     if(kiosques.features[i].geometry.coordinates){ //Protect if data corrumpted
         if(kiosques.features[i].geometry.type == "Point"){
-            markerKiosques[j] = new L.marker([kiosques.features[i].geometry.coordinates[1], kiosques.features[i].geometry.coordinates[0]], {icon: kiosqueIcon})
-            .bindPopup("<div class='info_lieu'>"+
-                "<h2 style=\"text-align:center;\">"+ "Kiosque" + "</h2>"+
-                "<a onclick=\"moveMarker(" + j + ", 'kiosque' " + ")\"><img src=\"img/localisation.png\"/></a>" +
-                "</div>"
-                );
-            j++;
+            if('name' in kiosques.features[i].properties){
+                markerKiosques[j] = new L.marker([kiosques.features[i].geometry.coordinates[1], kiosques.features[i].geometry.coordinates[0]], {icon: kiosqueIcon})
+                .bindPopup("<div class='info_lieu'>"+
+                    "<h2 style=\"text-align:center;\">"+ kiosques.features[i].properties.name + "</h2>"+
+                    "<a onclick=\"moveMarker(" + j + ", 'kiosque' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                    "</div>"
+                    );
+                j++;
+            }
+            else{
+              markerKiosques[j] = new L.marker([kiosques.features[i].geometry.coordinates[1], kiosques.features[i].geometry.coordinates[0]], {icon: kiosqueIcon})
+                .bindPopup("<div class='info_lieu'>"+
+                    "<h2 style=\"text-align:center;\">"+ "Kiosque" + "</h2>"+
+                    "<a onclick=\"moveMarker(" + j + ", 'kiosque' " + ")\"><img src=\"img/localisation.png\"/></a>" +
+                    "</div>"
+                    );
+                j++;  
+            }     
         }
-        
     }     
 }
 //To clean data, rearrange the array with a new variable j
