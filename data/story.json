@@ -22,7 +22,7 @@
       [
         "A001",
         "Réessayer",
-        "reset"
+        ""
       ]
     ]
   },
@@ -60,7 +60,7 @@
   },
   "A005": {
     "title": "Une voyante lucide",
-    "description": "Après\n avoir retrouvé Madame Irma au commisariat, celle ci vous prédit votre \navenir et vous envoie directement vers une bijouterie qu’elle a vue dans\n une de ses visions.",
+    "description": "Arrivé au commissariat, vous apercevez la roulotte d’Irma vide. Cependant vous pouvez la distinguer, menottes aux bras, dans le commissariat tout proche. Avide de réponses, vous allez la voir. Vous vous entretenez avec elle pendant un cours instant avant que la police ne la déplace. Tout ce que vous avez retenu est le mot “bijouterie”.",
     "conseq_ref": [
       [
         "A006",
@@ -125,6 +125,54 @@
         "A013",
         "Vous lui remettez la mission que votre patron vous a confié, et vous pouvez donc vous rediriger vers la bijouterie pour finir votre mission.",
         "bijouterie"
+      ]
+    ]
+  },
+  "A010": {
+    "title": "Fuyez pauvre fou",
+    "description": "Le fait que vos “amis” vous menacent à présent avec des couteaux, des tessons de bouteilles, et un sex toy vous indique qu’ils n’ont pas prévu de vous laisser partir avant de s’amuser un peu avec vous.",
+    "conseq_ref": [
+      [
+        "A999",
+        "Vous leur faites face. Fuir, c’est pour les boys band et les eunuques.",
+        "moi"
+      ],
+      [
+        "A014",
+        "Vous n’avez jamais vraiment été pour la violence depuis que le gros rémi vous avait volé votre croissant en 5e à grands coups de classeur Pokémon. La fuite vous semble donc être une bonne option, et le plus vite sera le mieux. Le musée tout proche semble donc une bonne option.",
+        "musée"
+      ]
+    ]
+  },
+  "A012": {
+    "title": "Et là, c'est le drame...",
+    "description": "Tout le monde sait que demander à quelqu’un d’effectuer une tâche un dimanche relève de la pure folie ; vous tombez donc sous le coup d’une flemmite aigüe, ce qui entraîne une rupture de la motivation et vous trouvez dans l’incapacité la plus totale d’être productif.",
+    "conseq_ref": [
+      [
+        "A999",
+        "Vous vous rendez à l'hôpital pour vous faire soigner.",
+        "hôpital"
+      ],
+      [
+        "A011",
+        "Vous tentez de ramper jusqu'au bar le plus proche; juste histoire de faire le plein.",
+        "bar"
+      ]
+    ]
+  },
+  "A999": {
+    "title": "MEURS",
+    "description": "Vous êtes mort.",
+    "conseq_ref": [
+      [
+        "A001",
+        "Recommencer",
+        "moi"
+      ],
+      [
+        "A014",
+        "Vous n’avez jamais vraiment été pour la violence depuis que le gros rémi vous avait volé votre croissant en 5e à grands coups de classeur Pokémon. La fuite vous semble donc être une bonne option, et le plus vite sera le mieux. Le musée tout proche semble donc une bonne option.",
+        "musée"
       ]
     ]
   }
