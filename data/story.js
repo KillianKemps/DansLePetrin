@@ -97,7 +97,7 @@ var story = {
     ]
   },
   "A008": {
-    "title": "Juste une !",
+    "title": "F.R.I.E.N.D.S",
     "description": "Alors que vous vous dirigez vers la bijouterie, vous croisez vos amis, qui se dirigent vers un bar. Ils vous proposent de les accompagner.\n",
     "conseq_ref": [
       [
@@ -144,12 +144,28 @@ var story = {
       ]
     ]
   },
+  "A011": {
+    "title": "Juste une !",
+    "description": "Après quelques (dizaines) de verres, votre regard s’arrête sur l’horloge. Celle-ci semble vouloir vous rappeler que l’heure tourne, et qu’il ne reste plus beaucoup de temps avant le moment fatidique.",
+    "conseq_ref": [
+      [
+        "A017",
+        " Vous tentez d’utiliser vos hypothétiques pouvoirs psychiques pour faire exploser l’horloge, pour lui régler son compte. Elle l’a cherché.\n",
+        "moi"
+      ],
+      [
+        "A005",
+        "Vous êtes alcoolisé et votre esprit est embrouillé. Votre regard tombe à présent sur une pub pour une voyante, Irma, qui se trouverait près du commissariat. Vu votre état, une voyante serait sûrement plus lucide que vous sur la situation. Vous vous rendez au commissariat chercher son aide.",
+        "commissariat"
+      ]
+    ]
+  },
   "A012": {
     "title": "Et là, c'est le drame...",
     "description": "Tout le monde sait que demander à quelqu’un d’effectuer une tâche un dimanche relève de la pure folie ; vous tombez donc sous le coup d’une flemmite aigüe, ce qui entraîne une rupture de la motivation et vous trouvez dans l’incapacité la plus totale d’être productif.",
     "conseq_ref": [
       [
-        "A999",
+        "A015",
         "Vous vous rendez à l'hôpital pour vous faire soigner.",
         "hopital"
       ],
@@ -236,8 +252,4 @@ var story = {
       ]
     ]
   }
-}
-
-
-
-;
+};
