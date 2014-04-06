@@ -21,7 +21,7 @@ var story = {
     "conseq_ref": [
       [
         "A001",
-        "Réessayer",
+        "Recommencer.",
         "reset"
       ]
     ]
@@ -102,7 +102,7 @@ var story = {
     "conseq_ref": [
       [
         "A010",
-        "Bien qu’une bière vous fasse envie, des souvenirs de soirées récentes passées avec vos amis refont surface ; vous ne vous souvenez d’ailleurs plus grand chose après avoir pris ce verre qui contenait une pillule, une aspirine d’après vos amis. Seul un certain mal au fessier persite de cette soirée étrange. Votre intuition vous pousse à passer votre chemin, et continuer en direction de la librairie.",
+        "Bien qu’une bière vous fasse envie, des souvenirs de soirées récentes passées avec vos amis refont surface ; vous ne vous souvenez d’ailleurs plus grand chose après avoir pris ce verre qui contenait une pillule, une aspirine d’après vos amis. Seul un certain mal au fessier persite de cette soirée étrange. Votre intuition vous pousse à passer votre chemin, et continuer en direction de la bijouterie.",
         "bijouterie"
       ],
       [
@@ -160,6 +160,44 @@ var story = {
       ]
     ]
   },
+  "A017": {
+    "title": "La déception",
+    "description": "Vos pouvoirs psychiques n’ont malheureusement pas eu d’emprise sur l’horloge, ni même sur le cours du temps.",
+    "conseq_ref": [
+      [
+        "A018",
+        "Vous vous résignez à retourner accomplir votre tâche, et vous vous dirigez vers un supermarché, histoire de trainer dans les rayons et essayer de trouver un paquet de gâteaux.",
+        "supermarche"
+      ],
+      [
+        "A200",
+        "Vous ne vous dégonflez pas, et décidez de lui montrer, à cette horloge, l’étendue réelle de vos pouvoirs déchainés !",
+        "moi"
+      ]
+    ]
+  },
+  "A200": {
+    "title": "La déception",
+    "description": "Vos pouvoirs psychiques n’ont malheureusement pas eu d’emprise sur l’horloge, ni même sur le cours du temps.",
+    "conseq_ref": [
+      [
+        "A201",
+        "Vous le saviez ! Vos pouvoirs sont de plus en plus puissants ! Il faut continuer !",
+        "moi"
+      ]
+    ]
+  },
+  "A201": {
+    "title": "La déception",
+    "description": "Vos pouvoirs psychiques n’ont malheureusement pas eu d’emprise sur l’horloge, ni même sur le cours du temps.",
+    "conseq_ref": [
+      [
+        "A201",
+        "Vous le saviez ! Vos pouvoirs sont de plus en plus puissants ! Il faut continuer !",
+        "moi"
+      ]
+    ]
+  },
   "A999": {
     "title": "MEURS",
     "description": "Vous êtes mort.",
@@ -168,12 +206,9 @@ var story = {
         "A001",
         "Recommencer",
         "moi"
-      ],
-      [
-        "A014",
-        "Vous n’avez jamais vraiment été pour la violence depuis que le gros rémi vous avait volé votre croissant en 5e à grands coups de classeur Pokémon. La fuite vous semble donc être une bonne option, et le plus vite sera le mieux. Le musée tout proche semble donc une bonne option.",
-        "musee"
       ]
     ]
   }
-};
+}
+
+;
