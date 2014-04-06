@@ -17,16 +17,16 @@ var baseMaps = {
 };
 
 var overlayMaps = {
-    "Bijoutiers" : bijoutiersLayer,
-    "Commissariats": commissariatsLayer,
-    "Fleuristes" : fleuristesLayer,
-    "Hopitaux": hopitauxLayer,
-    "Kiosques" : kiosquesLayer, 
+    "<img src='img/jewelry.png' /> Bijoutiers" : bijoutiersLayer,
+    "<img src='img/police.png' />Commissariats": commissariatsLayer,
+    "<img src='img/flowers.png' />Fleuristes" : fleuristesLayer,
+    "<img src='img/hospital-building.png' />Hopitaux": hopitauxLayer,
+    "<img src='img/kiosk.png' />Kiosques" : kiosquesLayer, 
     //"Hotels": hotelsLayer,
-    "Mairies": mairiesLayer,
-    "Musees": museesLayer,
-    "Pubs": pubsLayer,
-    "Supermarchés" : supermarchesLayer
+    "<img src='img/administration.png' />Mairies": mairiesLayer,
+    "<img src='img/museum_art.png' />Musees": museesLayer,
+    "<img src='img/bar.png' />Pubs": pubsLayer,
+    "<img src='img/supermarket.png' />Supermarchés" : supermarchesLayer,
 };
 
 var markerMusees = [];
