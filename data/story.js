@@ -165,9 +165,9 @@ var story = {
     "description": "Tout le monde sait que demander à quelqu’un d’effectuer une tâche un dimanche relève de la pure folie ; vous tombez donc sous le coup d’une flemmite aigüe, ce qui entraîne une rupture de la motivation et vous trouvez dans l’incapacité la plus totale d’être productif.",
     "conseq_ref": [
       [
-        "A016",
-        "Vous vous rendez à l'hôpital pour vous faire soigner.",
-        "hopital"
+        "A999",
+        "Votre cerveau commençant a vous lâcher, vous vous demandez si vous arracher un bras serait une bonne idée pour arrêter de travailler, et essayez donc ce stratagème.",
+        "moi"
       ],
       [
         "A011",
