@@ -98,7 +98,7 @@ var story = {
   },
   "A008": {
     "title": "Juste une !",
-    "description": "Pendant votre fuite, vous croisez vos amis, qui se dirigent vers un bar. Ils vous proposent de les accompagner.",
+    "description": "Alors que vous vous dirigez vers la bijouterie, vous croisez vos amis, qui se dirigent vers un bar. Ils vous proposent de les accompagner.\n",
     "conseq_ref": [
       [
         "A010",
@@ -122,7 +122,7 @@ var story = {
         "moi"
       ],
       [
-        "A013",
+        "A008",
         "Vous lui remettez la mission que votre patron vous a confié, et vous pouvez donc vous rediriger vers la bijouterie pour finir votre mission.",
         "bijouterie"
       ]
@@ -177,23 +177,50 @@ var story = {
     ]
   },
   "A200": {
-    "title": "La déception",
-    "description": "Vos pouvoirs psychiques n’ont malheureusement pas eu d’emprise sur l’horloge, ni même sur le cours du temps.",
+    "title": "Mal de crâne",
+    "description": "Pendant votre concentration, il vous a semblé voir l’horloge réagir a votre pouvoir impressionnant. Vous devez vous assurer que vos pouvoirs sont responsables de cela...",
     "conseq_ref": [
       [
         "A201",
-        "Vous le saviez ! Vos pouvoirs sont de plus en plus puissants ! Il faut continuer !",
+        "Continuer",
         "moi"
       ]
     ]
   },
   "A201": {
-    "title": "La déception",
-    "description": "Vos pouvoirs psychiques n’ont malheureusement pas eu d’emprise sur l’horloge, ni même sur le cours du temps.",
+    "title": "Mal de crâne 2",
+    "description": "Cette fois c’est sur ! Vous l’avez VU ! Vous l’avez senti ! Elle a bougé, elle a ressenti votre immense et redoutable pouvoir ! Il vous FAUT continuer, pour votre vengeance envers cette horloge !\n",
     "conseq_ref": [
       [
-        "A201",
-        "Vous le saviez ! Vos pouvoirs sont de plus en plus puissants ! Il faut continuer !",
+        "A202",
+        "Continuer",
+        "moi"
+      ]
+    ]
+  },
+  "A202": {
+    "title": "Mal de crâne 3",
+    "description": "OUI !!! Vous y êtes presque ! Il est trop tard pour faire marche arrière, et les cris de cette horloge ne lui éviteront pas une mort certaine !",
+    "conseq_ref": [
+      [
+        "A203",
+        "Continuer",
+        "moi"
+      ]
+    ]
+  },
+  "A203": {
+    "title": "Mal de crâne 4",
+    "description": " CA Y EST !!! CA Y EST !!! ELLE BOUGE ! UN DERNIER COUP ET ELLE VA EXPLOSER !!!!",
+    "conseq_ref": [
+      [
+        "A016",
+        "Un certain mal de tête se fait ressentir, et l'once de conscience qu'il vous reste vous fait réaliser qu'il serait temps de penser à respirer. Vous considérez malin de vous diriger vers un hôpital au plus vite.",
+        "hopital"
+      ],
+      [
+        "A999",
+        "Continuer",
         "moi"
       ]
     ]
@@ -210,5 +237,7 @@ var story = {
     ]
   }
 }
+
+
 
 ;
