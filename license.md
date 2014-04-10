@@ -1,4 +1,4 @@
-MIT Licence:
+MIT License:
 
 Copyright (C) 2014 Antoine Beauvillain, Killian Kemps, Hippolyte Lenfant, Rémi Lopes, Florian Mopin, Valentin Richard, Baptiste Trouillet
 
