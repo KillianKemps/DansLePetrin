@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<title>Dans le pétrin</title>
+		<link rel="stylesheet" href="css/normalize.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+	</head>
+	
+	<body>
+
+		<div id="map"></div>
+		<!-- <button id="showHideInterface" onClick="showHideInterface()">Show/Hide interface</button> -->
+		<div id="interfaceBlock" class="dialogMenu">
+			<button id="slideButton" type="button" onclick="showHideInterface()"><</button>
+			<h2 id="title">Dans le pétrin...</h2>
+			<p id="description"> 
+				<img src="img/character.png" id="characterImage"/>
+				Lors d’une balade avec votre petite amie, celle-ci fait une allusion à un évènement spécial, censé se dérouler le lendemain. C’est alors que vous réalisez qu’il s’agit du premier anniversaire de votre rencontre, que vous aviez totalement oublié. Vous n’avez bien entendu rien prévu, et vous devez donc absolument trouver quelque chose rapidement !
+			
+			<!--<a href="#"><img src="img/histoire.png"/></a>
+			<a href="#"><img src="img/propos.png"/></a>-->
+			<a href="#"><button id="start" onClick="story_manager()">Start</button></a></p>
+			<ul id="conseq_ref">
+			</ul>
+		<!-- <input id="visitbutton" type="button" value="Visit"> -->
+		</div>
+
+	
+		<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<!--<script src="data/liste_des_musees_franciliens.js"></script>-->
+		<script src="data/musees.js"></script>
+		<script src="data/hotels.js"></script>
+		<script src="data/hopitaux.js"></script>
+		<script src="data/commissariats.js"></script>
+		<script src="data/pub.js"></script>
+		<script src="data/mairies.js"></script>
+		<script src="data/fleuristes.js"></script>
+		<script src="data/kiosques.js"></script>
+		<script src="data/bijoutiers.js"></script>
+		<script src="data/supermarches.js"></script>
+
+		<script src="js/map_manager.js"></script>
+		<script src="js/data_manager.js"></script>
+		<script src="js/marker_manager.js"></script>
+		<script src="js/event_manager.js"></script>
+		<script src="data/story.js"></script>
+		<script src="js/story_manager.js"></script>
+		<script src="js/main.js"></script>
+		
+	</body>
+</html>

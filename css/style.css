@@ -1,0 +1,159 @@
+﻿/**
+* @site 		Marque/Projet
+* @version 		1.0
+* @lastmodified 2012-11-21
+*/
+
+/** --- = @section TYPOGRAPHY ---*/
+/** --- = @section LAYOUT---*/
+
+#map{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#interfaceBlock{
+	/* color: white; */
+	/* position: absolute;
+	top:50px; */
+/* 	height:70%;
+width: 20%;
+border: solid black 1px;
+background-color: black; 
+display: none; */
+}
+
+#visitbutton {
+	position: absolute;
+	bottom: 0px;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-bottom: 10px;
+}
+#slideButton {
+	float: right;
+	font-size: 10;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 55px;
+}
+#showHideInterface{
+	position: absolute;
+	left: 50px;
+	top:10px;
+}
+
+/** --- = @section COMPONENT ---*/
+/** --- = @section IE ---*/
+
+/****************7
+	dialogMenu
+******************/
+
+#interfaceBlock ul{
+	padding-bottom: 50px;
+	padding-left: 100px;
+    padding-right: 20px;
+}
+
+#characterImage{
+	/* width: 50%;
+	margin: 0 auto 20px;
+	display: block;
+	float: right; */
+
+ 	/* position: absolute;
+ 	    right: -120px;
+ 	    top: 220px;
+ 	    width: 50%; */
+
+	bottom: 190px;
+    left: -190px;
+    position: absolute;
+    width: 50%;
+}
+
+.dialogMenu {	
+	z-index: 2;
+	/*background-color: rgba(255,255,255,0.9);*/
+	background: url('../img/fond_card_840px.png') repeat-y;
+
+	width: 650px;
+	height: auto;
+
+	/* margin: auto;
+	margin-top: 39px; */
+	margin: 200px auto 0;
+
+	border-radius: 5px;
+
+	box-shadow: 1px 1px 12px #555;
+
+	/* opacity: 0.9; */
+
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+
+}
+
+.dialogMenu h2 {	
+	/* width: 115px; */
+	width: 500px;
+	margin: auto;
+	margin-left: 90px;
+	padding-top: 50px;
+}
+
+.dialogMenu p {	
+	width: 500px;
+	/* margin: auto;
+	margin-top: 47px; */
+	margin: 47px auto auto 110px;
+	font-size: 0.750em;
+
+	/* text-align: center; */
+	text-align: left;
+}
+
+.dialogMenu img { 
+/* 	margin-left: 165px; */
+	margin-left: 20px;
+}
+
+.dialogMenu #start {	
+	width: 134px;
+	margin: auto;
+	padding-left: 0px;
+	display: block;
+	margin-top: 50px;
+	/*padding-bottom: 70px;*/
+}
+
+.dialogMenu li{
+	list-style-type: none;
+}
+
+.dialogMenu button{
+    background: none repeat scroll 0 0  #1abc9c;
+    border: medium none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+/** Info Lieu Popup **/
+.info_lieu h2{
+	text-align: center;
+}
+.info_lieu img{
+	margin: 0 auto;
+	cursor: pointer;
+}
